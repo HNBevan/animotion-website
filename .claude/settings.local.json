@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/haile/.claude/projects/c--Users-haile-OneDrive-Desktop-AniMotion-Website/**)",
+      "Bash(python3 -c \":*)",
+      "Bash(python3 \"C:/Users/haile/.claude/projects/c--Users-haile-OneDrive-Desktop-AniMotion-Website/memory/vp_build.py\")"
+    ]
+  }
+}

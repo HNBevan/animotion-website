@@ -2101,6 +2101,14 @@ body {
 
 /* ── Responsive ── */
 @media (max-width: 900px) {
+    /* Disable slide-in reveal on mobile/tablet — cards stack vertically */
+    .svc-row.reveal-left,
+    .svc-row.reveal-right {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
     .svc-row, .svc-row--flip {
         flex-direction: column; margin: 0;
         min-height: 100vh; position: sticky; top: 0;

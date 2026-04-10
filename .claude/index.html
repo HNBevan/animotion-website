@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AniMotion | Bringing Ideas to Life</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-ani">Ani</span><span class="logo-motion">Motion</span>
+                <div class="logo-dot"></div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#work">Our Work</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact" class="btn-nav">Let's Talk!</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Image Reveal -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="title-line">We Bring</span>
+                    <span class="title-line highlight">Ideas to Life</span>
+                    <span class="title-line">Through Animation</span>
+                </h1>
+                <p class="hero-subtitle">Award-winning animation studio crafting characters, worlds, and motion that make brands impossible to forget.</p>
+                <div class="hero-buttons">
+                    <a href="#work" class="btn btn-primary">
+                        <span>See Our Magic</span>
+                        <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">Get a Quote</a>
+                </div>
+            </div>
+
+            <!-- Interactive Alien -->
+            <div class="hero-visual alien-stage" id="alienStage">
+                <div class="alien" id="alien">
+                    <!-- Speech bubble -->
+                    <div class="alien-speech" id="alienSpeech"><span id="alienSpeechText"></span></div>
+                    <!-- Body -->
+                    <div class="alien-body">
+                        <!-- Antennae (different ball colours) -->
+                        <div class="alien-ant alien-ant-l"><div class="alien-ant-ball aab-l" id="alienAntL"></div></div>
+                        <div class="alien-ant alien-ant-r"><div class="alien-ant-ball aab-r" id="alienAntR"></div></div>
+                        <!-- Body spots -->
+                        <div class="alien-spot as-1"></div>
+                        <div class="alien-spot as-2"></div>
+                        <div class="alien-spot as-3"></div>
+                        <!-- Eyes (each has a brow + coloured iris) -->
+                        <div class="alien-eyes">
+                            <div class="alien-eye ae-l">
+                                <div class="alien-brow"></div>
+                                <div class="ae-iris"></div><div class="ae-shine"></div>
+                                <div class="ae-drop ae-drop-1"></div>
+                                <div class="ae-drop ae-drop-2"></div>
+                                <div class="ae-drop ae-drop-3"></div>
+                            </div>
+                            <div class="alien-eye ae-c" id="alienEyeC">
+                                <div class="alien-brow"></div>
+                                <div class="ae-iris"></div><div class="ae-shine"></div>
+                            </div>
+                            <div class="alien-eye ae-r">
+                                <div class="alien-brow"></div>
+                                <div class="ae-iris"></div><div class="ae-shine"></div>
+                                <div class="ae-drop ae-drop-1"></div>
+                                <div class="ae-drop ae-drop-2"></div>
+                                <div class="ae-drop ae-drop-3"></div>
+                            </div>
+                        </div>
+                        <!-- Blush -->
+                        <div class="alien-blush ab-l"></div>
+                        <div class="alien-blush ab-r"></div>
+                        <!-- Mouth + 2 teeth -->
+                        <div class="alien-mouth" id="alienMouth">
+                            <div class="alien-tooth"></div>
+                            <div class="alien-tooth"></div>
+                            <div class="alien-tongue"></div>
+                        </div>
+                        <!-- Belly (clickable) -->
+                        <div class="alien-belly" id="alienBelly"><div class="alien-navel"></div></div>
+                        <!-- Arms (clickable - wave) -->
+                        <div class="alien-arm alien-arm-l" id="alienArmL"></div>
+                        <div class="alien-arm alien-arm-r" id="alienArmR"></div>
+                    </div>
+                    <!-- Legs (clickable) -->
+                    <div class="alien-legs" id="alienLegs">
+                        <div class="alien-leg alien-leg-l"></div>
+                        <div class="alien-leg alien-leg-r"></div>
+                    </div>
+                </div>
+                <div class="alien-hint">
+                    <span>drag &amp; throw</span>
+                    <span>click belly</span>
+                    <span>click legs</span>
+                    <span>click arms</span>
+                    <span>click eye</span>
+                    <span>click mouth</span>
+                    <span>click antennae</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Floating Elements -->
+        <div class="floating-shapes">
+            <div class="shape circle"></div>
+            <div class="shape triangle"></div>
+            <div class="shape square"></div>
+            <div class="shape donut"></div>
+            <div class="shape zigzag"></div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">What We Do</span>
+                <h2 class="section-title">Our <span class="highlight">Services</span></h2>
+                <p class="section-subtitle">From concept to final render - six distinct disciplines, one obsessive passion for bringing ideas to life.</p>
+            </div>
+        </div>
+
+        <!-- 1. 2D Animation -->
+        <div class="svc-row svc-row--2d reveal-left">
+            <div class="svc-row__demo">
+                <div class="svc-orb so1"></div>
+                <div class="svc-orb so2"></div>
+                <div class="art-scene">
+                    <!-- Film strip borders -->
+                    <div class="art-film-l">
+                        <div class="art-perf"></div><div class="art-perf"></div><div class="art-perf"></div>
+                        <div class="art-perf"></div><div class="art-perf"></div><div class="art-perf"></div>
+                    </div>
+                    <div class="art-film-r">
+                        <div class="art-perf"></div><div class="art-perf"></div><div class="art-perf"></div>
+                        <div class="art-perf"></div><div class="art-perf"></div><div class="art-perf"></div>
+                    </div>
+                    <!-- Immersive world background -->
+                    <div class="art-world">
+                        <div class="art-sky"></div>
+                        <div class="art-sun"></div>
+                        <div class="art-cloud art-c1"></div>
+                        <div class="art-cloud art-c2"></div>
+                        <div class="art-hill art-h1"></div>
+                        <div class="art-hill art-h2"></div>
+                        <div class="art-ground"></div>
+                    </div>
+                    <!-- Onion skin: previous frame ghost -->
+                    <div class="art-onion">
+                        <div class="ao-head"></div>
+                        <div class="ao-body">
+                            <div class="ao-arm ao-al"></div>
+                            <div class="ao-arm ao-ar"></div>
+                            <div class="ao-leg ao-ll"></div>
+                            <div class="ao-leg ao-lr"></div>
+                        </div>
+                    </div>
+                    <!-- Main character running -->
+                    <div class="ct-cat">
+                        <!-- Head - ears are inside, absolutely positioned to sit on top -->
+                        <div class="ct-head">
+                            <div class="ct-ear ct-ear-l"><div class="ct-ear-in"></div></div>
+                            <div class="ct-ear ct-ear-r"><div class="ct-ear-in"></div></div>
+                            <div class="ct-eye ct-eye-l"><div class="ct-iris"></div><div class="ct-shine"></div></div>
+                            <div class="ct-eye ct-eye-r"><div class="ct-iris"></div><div class="ct-shine"></div></div>
+                            <div class="ct-nose"></div>
+                            <div class="ct-mouth"></div>
+                            <div class="ct-wh ct-wh1"></div>
+                            <div class="ct-wh ct-wh2"></div>
+                            <div class="ct-wh ct-wh3"></div>
+                            <div class="ct-wh ct-wh4"></div>
+                            <div class="ct-blush ct-bl-l"></div>
+                            <div class="ct-blush ct-bl-r"></div>
+                        </div>
+                        <!-- Tail - before body in DOM so it renders behind -->
+                        <div class="ct-tail"><div class="ct-tail-tip"></div></div>
+                        <!-- Body - paws and feet inside -->
+                        <div class="ct-body">
+                            <div class="ct-belly"></div>
+                            <div class="ct-paw ct-paw-l"></div>
+                            <div class="ct-paw ct-paw-r"></div>
+                            <div class="ct-foot ct-foot-l"></div>
+                            <div class="ct-foot ct-foot-r"></div>
+                        </div>
+                        <!-- Shadow -->
+                        <div class="art-shadow"></div>
+                    </div>
+                    <!-- Frame counter -->
+                    <div class="art-frame">● REC &nbsp;<span class="art-fnum">12</span><span style="opacity:.5">/24</span></div>
+                </div>
+            </div>
+            <div class="svc-row__info">
+                <div class="svc-num-wrap">
+                    <span class="svc-num">01</span>
+                    <span class="svc-pill svc-pill--yellow">2D Animation</span>
+                </div>
+                <h3 class="svc-title">Classic Animation, <span class="highlight">Modern Magic</span></h3>
+                <p class="svc-desc">Fluid, expressive 2D with full character rigs, lip sync, and immersive worlds. Whether it's a 30-second ad or a 10-minute series, we bring every frame to life.</p>
+                <ul class="svc-includes">
+                    <li>Full storyboard &amp; animatic</li>
+                    <li>Character rigging &amp; animation</li>
+                    <li>Background art &amp; scene builds</li>
+                    <li>Lip sync &amp; sound design</li>
+                    <li>Unlimited revisions until perfect</li>
+                </ul>
+                <div class="svc-tags">
+                    <span class="svc-tag">Explainers</span>
+                    <span class="svc-tag">Brand Films</span>
+                    <span class="svc-tag">Kids Content</span>
+                    <span class="svc-tag">Social Ads</span>
+                </div>
+                <div class="svc-meta">
+                    <span class="svc-meta-item">⚡ From 7 days</span>
+                    <span class="svc-meta-item">💰 From £800</span>
+                </div>
+                <a href="#contact" class="btn btn-primary svc-cta">
+                    <span>Start a Project</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- 2. 3D Animation (flip) -->
+        <div class="svc-row svc-row--3d svc-row--flip reveal-right">
+            <div class="svc-row__demo">
+                <div class="svc-orb so3"></div>
+                <div class="svc-orb so4"></div>
+                <div class="bot-scene">
+                    <!-- Grid floor -->
+                    <div class="bot-grid-floor"></div>
+                    <!-- 3D CSS Cube centrepiece -->
+                    <div class="bot-cube-wrap">
+                        <div class="bot-cube">
+                            <div class="bot-face bot-front"></div>
+                            <div class="bot-face bot-back"></div>
+                            <div class="bot-face bot-left"></div>
+                            <div class="bot-face bot-right"></div>
+                            <div class="bot-face bot-top"></div>
+                            <div class="bot-face bot-bottom"></div>
+                        </div>
+                    </div>
+                    <!-- Small character peeking beside cube -->
+                    <div class="bot-peek" style="display:none">
+                        <div class="bot-peek-head">
+                            <div class="bot-peek-eye bot-peek-el"></div>
+                            <div class="bot-peek-eye bot-peek-er"></div>
+                        </div>
+                    </div>
+                    <span class="bot-sp bot-sp1">✦</span>
+                    <span class="bot-sp bot-sp2">◆</span>
+                    <span class="bot-sp bot-sp3">●</span>
+                </div>
+            </div>
+            <div class="svc-row__info">
+                <div class="svc-num-wrap">
+                    <span class="svc-num">02</span>
+                    <span class="svc-pill svc-pill--blue">3D Animation</span>
+                </div>
+                <h3 class="svc-title">Worlds That <span class="highlight">Pop Off Screen</span></h3>
+                <p class="svc-desc">Immersive 3D environments, product visualisations, and character animations that give your brand depth. From photorealistic renders to stylised 3D worlds - we make it real.</p>
+                <ul class="svc-includes">
+                    <li>3D modelling &amp; texturing</li>
+                    <li>Rigging &amp; character animation</li>
+                    <li>Lighting &amp; rendering</li>
+                    <li>Product visualisation</li>
+                    <li>VFX &amp; particle systems</li>
+                </ul>
+                <div class="svc-tags">
+                    <span class="svc-tag">Product Demos</span>
+                    <span class="svc-tag">Architecture</span>
+                    <span class="svc-tag">Game Cinematics</span>
+                    <span class="svc-tag">VFX</span>
+                </div>
+                <div class="svc-meta">
+                    <span class="svc-meta-item">⚡ From 10 days</span>
+                    <span class="svc-meta-item">💰 From £1,500</span>
+                </div>
+                <a href="#contact" class="btn btn-primary svc-cta">
+                    <span>Start a Project</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- 3. Motion Graphics -->
+        <div class="svc-row svc-row--mg reveal-left">
+            <div class="svc-row__demo">
+                <div class="hero-scene">
+                    <!-- Central morphing shape -->
+                    <div class="mot-center"></div>
+                    <!-- Orbiting / flying shapes -->
+                    <div class="mot-shape mot-s1"></div>
+                    <div class="mot-shape mot-s2"></div>
+                    <div class="mot-shape mot-s3"></div>
+                    <div class="mot-tri mot-t1"></div>
+                    <div class="mot-tri mot-t2"></div>
+                    <div class="mot-shape mot-s4"></div>
+                    <div class="mot-shape mot-s5"></div>
+                    <div class="mot-ring mot-r1"></div>
+                    <div class="mot-ring mot-r2"></div>
+                    <!-- Kinetic type lines -->
+                    <div class="mot-type-block">
+                        <div class="mot-line mot-line1"></div>
+                        <div class="mot-line mot-line2"></div>
+                        <div class="mot-line mot-line3"></div>
+                        <div class="mot-line mot-line4"></div>
+                    </div>
+                    <!-- Motion trails -->
+                    <div class="mot-trail mot-tr1"></div>
+                    <div class="mot-trail mot-tr2"></div>
+                </div>
+            </div>
+            <div class="svc-row__info">
+                <div class="svc-num-wrap">
+                    <span class="svc-num">03</span>
+                    <span class="svc-pill svc-pill--pink">Motion Graphics</span>
+                </div>
+                <h3 class="svc-title">Your Brand, <span class="highlight">Always Moving</span></h3>
+                <p class="svc-desc">Logo animations, kinetic typography, dynamic intros, and visual effects that make your brand impossible to ignore. Motion that communicates, not just decorates.</p>
+                <ul class="svc-includes">
+                    <li>Logo &amp; brand animation</li>
+                    <li>Kinetic typography</li>
+                    <li>Lower thirds &amp; overlays</li>
+                    <li>Animated infographics</li>
+                    <li>Social-format cutdowns</li>
+                </ul>
+                <div class="svc-tags">
+                    <span class="svc-tag">Logo Reveals</span>
+                    <span class="svc-tag">Intros / Outros</span>
+                    <span class="svc-tag">Data Viz</span>
+                    <span class="svc-tag">Social Reels</span>
+                </div>
+                <div class="svc-meta">
+                    <span class="svc-meta-item">⚡ From 3 days</span>
+                    <span class="svc-meta-item">💰 From £350</span>
+                </div>
+                <a href="#contact" class="btn btn-primary svc-cta">
+                    <span>Start a Project</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- 4. Character Design (flip) -->
+        <div class="svc-row svc-row--char svc-row--flip reveal-right">
+            <div class="svc-row__demo">
+                <div class="cat-scene">
+                    <!-- Sketchpad -->
+                    <div class="skp-pad">
+                        <!-- Spiral binding -->
+                        <div class="skp-spiral">
+                            <div class="skp-ring"></div><div class="skp-ring"></div><div class="skp-ring"></div>
+                            <div class="skp-ring"></div><div class="skp-ring"></div><div class="skp-ring"></div>
+                        </div>
+                        <!-- Character being drawn: finished parts solid, unfinished dashed -->
+                        <div class="skp-char">
+                            <div class="skp-char-head skp-done"></div>
+                            <div class="skp-char-eye skp-el skp-done"></div>
+                            <div class="skp-char-eye skp-er skp-done"></div>
+                            <div class="skp-char-smile skp-done"></div>
+                            <div class="skp-char-body skp-done"></div>
+                            <div class="skp-char-arm skp-arm-l skp-done"></div>
+                            <div class="skp-char-arm skp-arm-r skp-wip"></div>
+                            <div class="skp-char-leg skp-leg-l skp-wip"></div>
+                            <div class="skp-char-leg skp-leg-r skp-wip"></div>
+                        </div>
+                    </div>
+                    <!-- Pencil leaning against pad -->
+                    <div class="skp-pencil">
+                        <div class="skp-pencil-tip"></div>
+                        <div class="skp-pencil-body"></div>
+                        <div class="skp-pencil-eraser"></div>
+                    </div>
+                    <!-- Colour swatches -->
+                    <div class="skp-swatches">
+                        <div class="skp-swatch" style="background:#7C3AED"></div>
+                        <div class="skp-swatch" style="background:#EC4899"></div>
+                        <div class="skp-swatch" style="background:#3B82F6"></div>
+                        <div class="skp-swatch" style="background:#FBBF24"></div>
+                        <div class="skp-swatch" style="background:#10B981"></div>
+                    </div>
+                    <!-- Ruler -->
+                    <div class="skp-ruler">
+                        <div class="skp-tick"></div><div class="skp-tick"></div><div class="skp-tick"></div>
+                        <div class="skp-tick"></div><div class="skp-tick"></div>
+                    </div>
+                    <span class="cat-sp cat-sp1">★</span>
+                    <span class="cat-sp cat-sp2">✦</span>
+                </div>
+            </div>
+            <div class="svc-row__info">
+                <div class="svc-num-wrap">
+                    <span class="svc-num">04</span>
+                    <span class="svc-pill svc-pill--purple">Character Design</span>
+                </div>
+                <h3 class="svc-title">Characters That <span class="highlight">Live Forever</span></h3>
+                <p class="svc-desc">Original characters designed from scratch to carry your brand across every medium. We develop full character bibles - expressions, colour palettes, personality, and animation guides.</p>
+                <ul class="svc-includes">
+                    <li>Original concept sketches</li>
+                    <li>Full turnaround sheets</li>
+                    <li>Expression &amp; pose library</li>
+                    <li>Character bible &amp; usage guide</li>
+                    <li>Animation-ready rigged files</li>
+                </ul>
+                <div class="svc-tags">
+                    <span class="svc-tag">Brand Mascots</span>
+                    <span class="svc-tag">Series Characters</span>
+                    <span class="svc-tag">Game Characters</span>
+                    <span class="svc-tag">Avatars</span>
+                </div>
+                <div class="svc-meta">
+                    <span class="svc-meta-item">⚡ From 5 days</span>
+                    <span class="svc-meta-item">💰 From £600</span>
+                </div>
+                <a href="#contact" class="btn btn-primary svc-cta">
+                    <span>Start a Project</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- 5. UI Animations -->
+        <div class="svc-row svc-row--ui reveal-left">
+            <div class="svc-row__demo">
+                <div class="bun-scene">
+                    <!-- Phone frame -->
+                    <div class="ui-phone">
+                        <div class="ui-notch"></div>
+                        <div class="ui-screen">
+                            <!-- Header bar -->
+                            <div class="ui-header">
+                                <div class="ui-header-dot"></div>
+                                <div class="ui-header-title"></div>
+                            </div>
+                            <!-- Toggle switch -->
+                            <div class="ui-toggle-row">
+                                <div class="ui-toggle-label"></div>
+                                <div class="ui-toggle">
+                                    <div class="ui-toggle-knob"></div>
+                                </div>
+                            </div>
+                            <!-- Progress bar -->
+                            <div class="ui-progress-track">
+                                <div class="ui-progress-fill"></div>
+                            </div>
+                            <!-- Sliding card -->
+                            <div class="ui-card">
+                                <div class="ui-card-line"></div>
+                                <div class="ui-card-line ui-card-line--short"></div>
+                            </div>
+                            <!-- Floating action button -->
+                            <div class="ui-fab">+</div>
+                        </div>
+                        <div class="ui-home-bar"></div>
+                    </div>
+                    <!-- Cursor outside phone -->
+                    <div class="ui-cursor">&#9654;</div>
+                    <!-- Click ripple -->
+                    <div class="ui-ripple ui-ripple-1"></div>
+                    <div class="ui-ripple ui-ripple-2"></div>
+                    <span class="bun-sp bun-sp1">✦</span>
+                    <span class="bun-sp bun-sp2">✧</span>
+                </div>
+            </div>
+            <div class="svc-row__info">
+                <div class="svc-num-wrap">
+                    <span class="svc-num">05</span>
+                    <span class="svc-pill svc-pill--cyan">UI Animations</span>
+                </div>
+                <h3 class="svc-title">Apps That <span class="highlight">Feel Alive</span></h3>
+                <p class="svc-desc">Micro-interactions, page transitions, onboarding flows, and loading animations that turn a good app into an unforgettable one. Every tap should feel satisfying.</p>
+                <ul class="svc-includes">
+                    <li>Micro-interaction design</li>
+                    <li>Page &amp; component transitions</li>
+                    <li>Lottie / CSS / Rive animations</li>
+                    <li>Onboarding &amp; empty states</li>
+                    <li>Loading &amp; skeleton screens</li>
+                </ul>
+                <div class="svc-tags">
+                    <span class="svc-tag">Mobile Apps</span>
+                    <span class="svc-tag">Web Apps</span>
+                    <span class="svc-tag">SaaS Products</span>
+                    <span class="svc-tag">E-commerce</span>
+                </div>
+                <div class="svc-meta">
+                    <span class="svc-meta-item">⚡ From 3 days</span>
+                    <span class="svc-meta-item">💰 From £400</span>
+                </div>
+                <a href="#contact" class="btn btn-primary svc-cta">
+                    <span>Start a Project</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- 6. Commercial Ads (flip) -->
+        <div class="svc-row svc-row--ads svc-row--flip reveal-right">
+            <div class="svc-row__demo">
+                <div class="fox-scene">
+                    <!-- TV / monitor frame -->
+                    <div class="tv-monitor">
+                        <div class="tv-bezel">
+                            <div class="tv-screen">
+                                <!-- Animated ad content -->
+                                <div class="tv-badge">NEW!</div>
+                                <div class="tv-product">
+                                    <div class="tv-shine"></div>
+                                </div>
+                                <div class="tv-price">£99</div>
+                                <div class="tv-btn">Buy Now</div>
+                                <!-- Confetti -->
+                                <div class="tv-conf tv-c1">✦</div>
+                                <div class="tv-conf tv-c2">★</div>
+                                <div class="tv-conf tv-c3">✧</div>
+                                <div class="tv-conf tv-c4">●</div>
+                            </div>
+                        </div>
+                        <!-- TV stand -->
+                        <div class="tv-stand-neck"></div>
+                        <div class="tv-stand-base"></div>
+                    </div>
+                    <!-- Broadcast signal waves -->
+                    <div class="tv-signal tv-sig1"></div>
+                    <div class="tv-signal tv-sig2"></div>
+                    <div class="tv-signal tv-sig3"></div>
+                    <span class="fox-sp fox-sp1">✦</span>
+                    <span class="fox-sp fox-sp2">★</span>
+                </div>
+            </div>
+            <div class="svc-row__info">
+                <div class="svc-num-wrap">
+                    <span class="svc-num">06</span>
+                    <span class="svc-pill svc-pill--orange">Commercial Ads</span>
+                </div>
+                <h3 class="svc-title">Ads That <span class="highlight">Stop the Scroll</span></h3>
+                <p class="svc-desc">Eye-catching animated ads built to perform - not just look good. From 6-second bumpers to 60-second brand films, we craft every second to maximise attention and drive action.</p>
+                <ul class="svc-includes">
+                    <li>Concept &amp; script development</li>
+                    <li>Animated ad production</li>
+                    <li>Platform-specific cutdowns</li>
+                    <li>A/B variant creation</li>
+                    <li>Captions &amp; subtitle files</li>
+                </ul>
+                <div class="svc-tags">
+                    <span class="svc-tag">YouTube Ads</span>
+                    <span class="svc-tag">Meta / TikTok</span>
+                    <span class="svc-tag">TV Commercials</span>
+                    <span class="svc-tag">OOH Screens</span>
+                </div>
+                <div class="svc-meta">
+                    <span class="svc-meta-item">⚡ From 5 days</span>
+                    <span class="svc-meta-item">💰 From £900</span>
+                </div>
+                <a href="#contact" class="btn btn-primary svc-cta">
+                    <span>Start a Project</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Video Showcase Section -->
+    <section id="work" class="work">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Our Portfolio</span>
+                <h2 class="section-title">Featured <span class="highlight">Work</span></h2>
+                <p class="section-subtitle">Real projects. Real results. A small taste of what we've built.</p>
+            </div>
+
+            <div class="video-grid">
+                <div class="video-card featured">
+                    <div class="video-thumbnail">
+                        <div class="video-placeholder">
+                            <div class="play-button">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </div>
+                            <div class="video-overlay"></div>
+                            <div class="video-bg-animation">
+                                <span class="float-element">🎬</span>
+                                <span class="float-element">⭐</span>
+                                <span class="float-element">🎭</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <span class="video-tag">Featured Project</span>
+                        <h3>Brand Story Animation</h3>
+                        <p>A full-length brand origin film for a fintech scale-up - 2D, voice-over, and custom score.</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <div class="video-placeholder small">
+                            <div class="play-button">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </div>
+                            <div class="video-overlay"></div>
+                            <div class="video-bg-animation">
+                                <span class="float-element">🎮</span>
+                                <span class="float-element">🌟</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <span class="video-tag">Explainer</span>
+                        <h3>Product Demo</h3>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <div class="video-placeholder small">
+                            <div class="play-button">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </div>
+                            <div class="video-overlay"></div>
+                            <div class="video-bg-animation">
+                                <span class="float-element">🎬</span>
+                                <span class="float-element">🎭</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <span class="video-tag">3D Animation</span>
+                        <h3>Game Trailer</h3>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <div class="video-placeholder small">
+                            <div class="play-button">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </div>
+                            <div class="video-overlay"></div>
+                            <div class="video-bg-animation">
+                                <span class="float-element">⭐</span>
+                                <span class="float-element">🎮</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <span class="video-tag">Motion Graphics</span>
+                        <h3>Logo Animation</h3>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <div class="video-placeholder small">
+                            <div class="play-button">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </div>
+                            <div class="video-overlay"></div>
+                            <div class="video-bg-animation">
+                                <span class="float-element">🎭</span>
+                                <span class="float-element">💫</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <span class="video-tag">Character</span>
+                        <h3>Mascot Series</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="work-cta">
+                <a href="#" class="btn btn-primary">View All Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About/Stats Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <span class="section-tag">About Us</span>
+                    <h2 class="section-title">Animation That <span class="highlight">Actually Works</span></h2>
+                    <p>At AniMotion, we believe every brand has a story worth animating. Our team of creative wizards combines artistic flair with technical expertise to create animations that don't just look amazing - they connect, engage, and inspire.</p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <span class="feature-icon">🎯</span>
+                            <span>Results-Driven</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">💡</span>
+                            <span>Bold Ideas</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">⚡</span>
+                            <span>On-Time, Every Time</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-number" data-target="150">0</span>
+                        <span class="stat-plus">+</span>
+                        <span class="stat-label">Projects Completed</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" data-target="50">0</span>
+                        <span class="stat-plus">+</span>
+                        <span class="stat-label">Happy Clients</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" data-target="12">0</span>
+                        <span class="stat-label">Team Members</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" data-target="8">0</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Animated Background Elements -->
+        <div class="about-shapes">
+            <div class="shape-blob blob-1"></div>
+            <div class="shape-blob blob-2"></div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <!-- Floating confetti -->
+        <div class="contact-confetti">
+            <span>⭐</span><span>🌟</span><span>✨</span><span>💫</span><span>★</span><span>✦</span><span>✶</span><span>✵</span><span>⭐</span><span>🌟</span><span>✨</span><span>💫</span>
+        </div>
+
+        <div class="container">
+            <div class="contact-layout">
+
+                <!-- Left: info + mascot -->
+                <div class="contact-info">
+                    <span class="section-tag">Get In Touch</span>
+                    <h2 class="section-title">Let's Make<br><span class="highlight">Something Amazing</span></h2>
+                    <p class="contact-intro">Have a project in mind? Drop us a message and we'll get back to you within 24 hours. No boring briefs - just bring your wildest idea.</p>
+
+                    <div class="contact-details">
+                        <div class="contact-detail">
+                            <span class="detail-icon">📧</span>
+                            <div>
+                                <span class="detail-label">Email Us</span>
+                                <span class="detail-value">hello@animotion.com</span>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <span class="detail-icon">📞</span>
+                            <div>
+                                <span class="detail-label">Call Us</span>
+                                <span class="detail-value">0800 XXX XXX</span>
+                            </div>ni
+                        </div>
+                        <div class="contact-detail">
+                            <span class="detail-icon">⚡</span>
+                            <div>
+                                <span class="detail-label">Response Time</span>
+                                <span class="detail-value">Within 24 hours</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bouncy contact mascot -->
+                    <div class="contact-mascot-wrap">
+                        <div class="contact-mascot">
+                            <div class="cm-body">
+                                <div class="cm-face">
+                                    <div class="cm-eyes">
+                                        <div class="cm-eye l"><div class="cm-pupil"></div></div>
+                                        <div class="cm-eye r"><div class="cm-pupil"></div></div>
+                                    </div>
+                                    <div class="cm-mouth"></div>
+                                    <div class="cm-blush l"></div>
+                                    <div class="cm-blush r"></div>
+                                </div>
+                                <div class="cm-arm l"></div>
+                                <div class="cm-arm r"></div>
+                            </div>
+                            <div class="cm-shadow"></div>
+                        </div>
+                        <div class="cm-bubble">We'd love to hear from you! 👋</div>
+                    </div>
+                </div>
+
+                <!-- Right: form -->
+                <div class="contact-form-wrap">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-progress">
+                            <div class="form-progress-bar" id="formProgressBar"></div>
+                        </div>
+                        <div class="form-progress-label" id="formProgressLabel">0 / 5 fields filled</div>
+
+                        <div class="form-group">
+                            <label for="contactName">Your Name</label>
+                            <input type="text" id="contactName" name="name" placeholder="Ani Motion" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactEmail">Email Address</label>
+                            <input type="email" id="contactEmail" name="email" placeholder="animotion@example.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>What are you after?</label>
+                            <div class="service-chips">
+                                <label class="chip"><input type="checkbox" name="service" value="2d"> 2D Animation</label>
+                                <label class="chip"><input type="checkbox" name="service" value="3d"> 3D Animation</label>
+                                <label class="chip"><input type="checkbox" name="service" value="motion"> Motion Graphics</label>
+                                <label class="chip"><input type="checkbox" name="service" value="character"> Character Design</label>
+                                <label class="chip"><input type="checkbox" name="service" value="mascot"> Brand Mascot</label>
+                                <label class="chip"><input type="checkbox" name="service" value="ads"> Commercial Ads</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactBudget">Budget Range</label>
+                            <select id="contactBudget" name="budget">
+                                <option value="" disabled selected>Pick a range...</option>
+                                <option value="starter">Starter - Under £1,000</option>
+                                <option value="small">Small Project - £1k–£5k</option>
+                                <option value="medium">Medium - £5k–£15k</option>
+                                <option value="large">Large - £15k–£50k</option>
+                                <option value="enterprise">Enterprise - £50k+</option>
+                                <option value="tbd">Not sure yet</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactMessage">Tell us about your project</label>
+                            <textarea id="contactMessage" name="message" rows="5" placeholder="We're re-launching our brand and need a mascot that bounces off walls…"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            <span>Send It! 🚀</span>
+                            <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </button>
+
+                        <div class="form-success" id="formSuccess">
+                            <span class="success-emoji">🎉</span>
+                            <strong>Message sent!</strong> We'll be in touch within 24 hours.
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <span class="logo-ani">Ani</span><span class="logo-motion">Motion</span>
+                    </a>
+                    <p>Bold animation. Real results. Delivered on time.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram">📸</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                        <a href="#" aria-label="YouTube">🎬</a>
+                        <a href="#" aria-label="LinkedIn">💼</a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="#">2D Animation</a></li>
+                            <li><a href="#">3D Animation</a></li>
+                            <li><a href="#">Motion Graphics</a></li>
+                            <li><a href="#">Character Design</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Our Work</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Contact</h4>
+                        <ul>
+                            <li>hello@animotion.com</li>
+                            <li>+44 (0) 20 7946 0821</li>
+                            <li>Studio 7, The Custard Factory</li>
+                            <li>Birmingham, B5 5PA</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 AniMotion. All rights reserved. Made with 💜 and lots of keyframes.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
