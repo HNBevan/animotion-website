@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7C3AED"/>
+      <stop offset="100%" stop-color="#EC4899"/>
+    </linearGradient>
+  </defs>
+  <!-- Background circle -->
+  <circle cx="32" cy="32" r="32" fill="url(#bg)"/>
+  <!-- Alien head -->
+  <ellipse cx="32" cy="34" rx="16" ry="14" fill="#FBBF24"/>
+  <!-- Antennae -->
+  <line x1="25" y1="21" x2="20" y2="10" stroke="#FBBF24" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="39" y1="21" x2="44" y2="10" stroke="#FBBF24" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="20" cy="9"  r="3.5" fill="#EC4899"/>
+  <circle cx="44" cy="9"  r="3.5" fill="#7C3AED"/>
+  <!-- Eyes -->
+  <ellipse cx="25" cy="33" rx="5" ry="6" fill="white"/>
+  <ellipse cx="39" cy="33" rx="5" ry="6" fill="white"/>
+  <circle  cx="26" cy="34" r="3"  fill="#1a0040"/>
+  <circle  cx="40" cy="34" r="3"  fill="#1a0040"/>
+  <circle  cx="27" cy="33" r="1.2" fill="white"/>
+  <circle  cx="41" cy="33" r="1.2" fill="white"/>
+  <!-- Smile -->
+  <path d="M 25 43 Q 32 49 39 43" stroke="#92400e" stroke-width="2" fill="none" stroke-linecap="round"/>
+</svg>

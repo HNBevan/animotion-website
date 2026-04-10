@@ -1,0 +1,1290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AniMotion | Bringing Ideas to Life</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-ani">Ani</span><span class="logo-motion">Motion</span>
+                <div class="logo-dot"></div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#work">Our Work</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact" class="btn-nav">Let's Talk!</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Image Reveal -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="mobile-play-hint">Click anywhere to play!</div>
+                <h1 class="hero-title">
+                    <span class="title-line">We Bring</span>
+                    <span class="title-line highlight">Ideas to Life</span>
+                    <span class="title-line">Through Animation</span>
+                </h1>
+                <p class="hero-subtitle">Award-winning animation studio crafting characters, worlds, and motion that make brands impossible to forget.</p>
+                <div class="hero-buttons">
+                    <a href="#work" class="btn btn-primary">
+                        <span>See Our Magic</span>
+                        <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">Get a Quote</a>
+                </div>
+            </div>
+
+            <!-- Interactive Alien -->
+            <div class="hero-visual alien-stage" id="alienStage">
+                <div class="alien" id="alien">
+                    <!-- Speech bubble -->
+                    <div class="alien-speech" id="alienSpeech"><span id="alienSpeechText"></span></div>
+                    <!-- Body -->
+                    <div class="alien-body">
+                        <!-- Antennae (different ball colours) -->
+                        <div class="alien-ant alien-ant-l"><div class="alien-ant-ball aab-l" id="alienAntL"></div></div>
+                        <div class="alien-ant alien-ant-r"><div class="alien-ant-ball aab-r" id="alienAntR"></div></div>
+                        <!-- Body spots -->
+                        <div class="alien-spot as-1"></div>
+                        <div class="alien-spot as-2"></div>
+                        <div class="alien-spot as-3"></div>
+                        <!-- Eyes (each has a brow + coloured iris) -->
+                        <div class="alien-eyes">
+                            <div class="alien-eye ae-l">
+                                <div class="alien-brow"></div>
+                                <div class="ae-iris"></div><div class="ae-shine"></div>
+                                <div class="ae-drop ae-drop-1"></div>
+                                <div class="ae-drop ae-drop-2"></div>
+                                <div class="ae-drop ae-drop-3"></div>
+                            </div>
+                            <div class="alien-eye ae-c" id="alienEyeC">
+                                <div class="alien-brow"></div>
+                                <div class="ae-iris"></div><div class="ae-shine"></div>
+                            </div>
+                            <div class="alien-eye ae-r">
+                                <div class="alien-brow"></div>
+                                <div class="ae-iris"></div><div class="ae-shine"></div>
+                                <div class="ae-drop ae-drop-1"></div>
+                                <div class="ae-drop ae-drop-2"></div>
+                                <div class="ae-drop ae-drop-3"></div>
+                            </div>
+                        </div>
+                        <!-- Blush -->
+                        <div class="alien-blush ab-l"></div>
+                        <div class="alien-blush ab-r"></div>
+                        <!-- Mouth + 2 teeth -->
+                        <div class="alien-mouth" id="alienMouth">
+                            <div class="alien-tooth"></div>
+                            <div class="alien-tooth"></div>
+                            <div class="alien-tongue"></div>
+                        </div>
+                        <!-- Belly (clickable) -->
+                        <div class="alien-belly" id="alienBelly"><div class="alien-navel"></div></div>
+                        <!-- Arms (clickable - wave) -->
+                        <div class="alien-arm alien-arm-l" id="alienArmL"></div>
+                        <div class="alien-arm alien-arm-r" id="alienArmR"></div>
+                    </div>
+                    <!-- Legs (clickable) -->
+                    <div class="alien-legs" id="alienLegs">
+                        <div class="alien-leg alien-leg-l"></div>
+                        <div class="alien-leg alien-leg-r"></div>
+                    </div>
+                </div>
+                <div class="alien-hint">
+                    <span>drag &amp; throw</span>
+                    <span>click belly</span>
+                    <span>click legs</span>
+                    <span>click arms</span>
+                    <span>click eye</span>
+                    <span>click mouth</span>
+                    <span>click antennae</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Floating Elements -->
+        <div class="floating-shapes">
+            <div class="shape circle"></div>
+            <div class="shape triangle"></div>
+            <div class="shape square"></div>
+            <div class="shape donut"></div>
+            <div class="shape zigzag"></div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- About/Stats Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <span class="section-tag">About Us</span>
+                    <h2 class="section-title">Animation That <span class="highlight">Actually Works</span></h2>
+                    <p>At AniMotion, we believe every brand has a story worth animating. Our team of creative wizards combines artistic flair with technical expertise to create animations that don't just look amazing - they connect, engage, and inspire.</p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <span class="feature-icon">🎯</span>
+                            <span>Results-Driven</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">💡</span>
+                            <span>Bold Ideas</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">⚡</span>
+                            <span>On-Time, Every Time</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-number" data-target="150">0</span>
+                        <span class="stat-plus">+</span>
+                        <span class="stat-label">Projects Completed</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" data-target="50">0</span>
+                        <span class="stat-plus">+</span>
+                        <span class="stat-label">Happy Clients</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" data-target="12">0</span>
+                        <span class="stat-label">Team Members</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" data-target="8">0</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Animated Background Elements -->
+        <div class="about-shapes">
+            <div class="shape-blob blob-1"></div>
+            <div class="shape-blob blob-2"></div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">What We Do</span>
+                <h2 class="section-title">Our <span class="highlight">Services</span></h2>
+                <p class="section-subtitle">From concept to final render - six distinct disciplines, one obsessive passion for bringing ideas to life.</p>
+            </div>
+        </div>
+
+        <!-- 1. 2D Animation -->
+        <div class="svc-row svc-row--2d reveal-left">
+            <div class="svc-row__demo">
+                <div class="svc-orb so1"></div>
+                <div class="svc-orb so2"></div>
+                <div class="art-scene">
+                    <!-- Film strip borders -->
+                    <div class="art-film-l">
+                        <div class="art-perf"></div><div class="art-perf"></div><div class="art-perf"></div>
+                        <div class="art-perf"></div><div class="art-perf"></div><div class="art-perf"></div>
+                    </div>
+                    <div class="art-film-r">
+                        <div class="art-perf"></div><div class="art-perf"></div><div class="art-perf"></div>
+                        <div class="art-perf"></div><div class="art-perf"></div><div class="art-perf"></div>
+                    </div>
+                    <!-- Immersive world background -->
+                    <div class="art-world">
+                        <div class="art-sky"></div>
+                        <div class="art-sun"></div>
+                        <div class="art-cloud art-c1"></div>
+                        <div class="art-cloud art-c2"></div>
+                        <div class="art-hill art-h1"></div>
+                        <div class="art-hill art-h2"></div>
+                        <div class="art-ground"></div>
+                    </div>
+                    <!-- Onion skin: previous frame ghost -->
+                    <div class="art-onion">
+                        <div class="ao-head"></div>
+                        <div class="ao-body">
+                            <div class="ao-arm ao-al"></div>
+                            <div class="ao-arm ao-ar"></div>
+                            <div class="ao-leg ao-ll"></div>
+                            <div class="ao-leg ao-lr"></div>
+                        </div>
+                    </div>
+                    <!-- Main character running -->
+                    <div class="ct-cat">
+                        <!-- Head - ears are inside, absolutely positioned to sit on top -->
+                        <div class="ct-head">
+                            <div class="ct-ear ct-ear-l"><div class="ct-ear-in"></div></div>
+                            <div class="ct-ear ct-ear-r"><div class="ct-ear-in"></div></div>
+                            <div class="ct-eye ct-eye-l"><div class="ct-iris"></div><div class="ct-shine"></div></div>
+                            <div class="ct-eye ct-eye-r"><div class="ct-iris"></div><div class="ct-shine"></div></div>
+                            <div class="ct-nose"></div>
+                            <div class="ct-mouth"></div>
+                            <div class="ct-wh ct-wh1"></div>
+                            <div class="ct-wh ct-wh2"></div>
+                            <div class="ct-wh ct-wh3"></div>
+                            <div class="ct-wh ct-wh4"></div>
+                            <div class="ct-blush ct-bl-l"></div>
+                            <div class="ct-blush ct-bl-r"></div>
+                        </div>
+                        <!-- Tail - before body in DOM so it renders behind -->
+                        <div class="ct-tail"><div class="ct-tail-tip"></div></div>
+                        <!-- Body - paws and feet inside -->
+                        <div class="ct-body">
+                            <div class="ct-belly"></div>
+                            <div class="ct-paw ct-paw-l"></div>
+                            <div class="ct-paw ct-paw-r"></div>
+                            <div class="ct-foot ct-foot-l"></div>
+                            <div class="ct-foot ct-foot-r"></div>
+                        </div>
+                        <!-- Shadow -->
+                        <div class="art-shadow"></div>
+                    </div>
+                    <!-- Frame counter -->
+                    <div class="art-frame">● REC &nbsp;<span class="art-fnum">12</span><span style="opacity:.5">/24</span></div>
+                </div>
+            </div>
+            <div class="svc-row__info">
+                <div class="svc-num-wrap">
+                    <span class="svc-num">01</span>
+                    <span class="svc-pill svc-pill--yellow">2D Animation</span>
+                </div>
+                <h3 class="svc-title">Classic Animation, <span class="highlight">Modern Magic</span></h3>
+                <p class="svc-desc">Fluid, expressive 2D with full character rigs, lip sync, and immersive worlds. Whether it's a 30-second ad or a 10-minute series, we bring every frame to life.</p>
+                <ul class="svc-includes">
+                    <li>Full storyboard &amp; animatic</li>
+                    <li>Character rigging &amp; animation</li>
+                    <li>Background art &amp; scene builds</li>
+                    <li>Lip sync &amp; sound design</li>
+                    <li>Unlimited revisions until perfect</li>
+                </ul>
+                <div class="svc-tags">
+                    <span class="svc-tag">Explainers</span>
+                    <span class="svc-tag">Brand Films</span>
+                    <span class="svc-tag">Kids Content</span>
+                    <span class="svc-tag">Social Ads</span>
+                </div>
+                <div class="svc-meta">
+                    <span class="svc-meta-item">⚡ From 7 days</span>
+                    <span class="svc-meta-item">💰 From £800</span>
+                </div>
+                <a href="#contact" class="btn btn-primary svc-cta">
+                    <span>Start a Project</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- 2. 3D Animation (flip) -->
+        <div class="svc-row svc-row--3d svc-row--flip reveal-right">
+            <div class="svc-row__demo">
+                <div class="svc-orb so3"></div>
+                <div class="svc-orb so4"></div>
+                <div class="bot-scene">
+                    <!-- Grid floor -->
+                    <div class="bot-grid-floor"></div>
+                    <!-- 3D CSS Cube centrepiece -->
+                    <div class="bot-cube-wrap">
+                        <div class="bot-cube">
+                            <div class="bot-face bot-front"></div>
+                            <div class="bot-face bot-back"></div>
+                            <div class="bot-face bot-left"></div>
+                            <div class="bot-face bot-right"></div>
+                            <div class="bot-face bot-top"></div>
+                            <div class="bot-face bot-bottom"></div>
+                        </div>
+                    </div>
+                    <!-- Small character peeking beside cube -->
+                    <div class="bot-peek" style="display:none">
+                        <div class="bot-peek-head">
+                            <div class="bot-peek-eye bot-peek-el"></div>
+                            <div class="bot-peek-eye bot-peek-er"></div>
+                        </div>
+                    </div>
+                    <span class="bot-sp bot-sp1">✦</span>
+                    <span class="bot-sp bot-sp2">◆</span>
+                    <span class="bot-sp bot-sp3">●</span>
+                </div>
+            </div>
+            <div class="svc-row__info">
+                <div class="svc-num-wrap">
+                    <span class="svc-num">02</span>
+                    <span class="svc-pill svc-pill--blue">3D Animation</span>
+                </div>
+                <h3 class="svc-title">Worlds That <span class="highlight">Pop Off Screen</span></h3>
+                <p class="svc-desc">Immersive 3D environments, product visualisations, and character animations that give your brand depth. From photorealistic renders to stylised 3D worlds - we make it real.</p>
+                <ul class="svc-includes">
+                    <li>3D modelling &amp; texturing</li>
+                    <li>Rigging &amp; character animation</li>
+                    <li>Lighting &amp; rendering</li>
+                    <li>Product visualisation</li>
+                    <li>VFX &amp; particle systems</li>
+                </ul>
+                <div class="svc-tags">
+                    <span class="svc-tag">Product Demos</span>
+                    <span class="svc-tag">Architecture</span>
+                    <span class="svc-tag">Game Cinematics</span>
+                    <span class="svc-tag">VFX</span>
+                </div>
+                <div class="svc-meta">
+                    <span class="svc-meta-item">⚡ From 10 days</span>
+                    <span class="svc-meta-item">💰 From £1,500</span>
+                </div>
+                <a href="#contact" class="btn btn-primary svc-cta">
+                    <span>Start a Project</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- 3. Motion Graphics -->
+        <div class="svc-row svc-row--mg reveal-left">
+            <div class="svc-row__demo">
+                <div class="hero-scene">
+                    <!-- Central morphing shape -->
+                    <div class="mot-center"></div>
+                    <!-- Orbiting / flying shapes -->
+                    <div class="mot-shape mot-s1"></div>
+                    <div class="mot-shape mot-s2"></div>
+                    <div class="mot-shape mot-s3"></div>
+                    <div class="mot-tri mot-t1"></div>
+                    <div class="mot-tri mot-t2"></div>
+                    <div class="mot-shape mot-s4"></div>
+                    <div class="mot-shape mot-s5"></div>
+                    <div class="mot-ring mot-r1"></div>
+                    <div class="mot-ring mot-r2"></div>
+                    <!-- Kinetic type lines -->
+                    <div class="mot-type-block">
+                        <div class="mot-line mot-line1"></div>
+                        <div class="mot-line mot-line2"></div>
+                        <div class="mot-line mot-line3"></div>
+                        <div class="mot-line mot-line4"></div>
+                    </div>
+                    <!-- Motion trails -->
+                    <div class="mot-trail mot-tr1"></div>
+                    <div class="mot-trail mot-tr2"></div>
+                </div>
+            </div>
+            <div class="svc-row__info">
+                <div class="svc-num-wrap">
+                    <span class="svc-num">03</span>
+                    <span class="svc-pill svc-pill--pink">Motion Graphics</span>
+                </div>
+                <h3 class="svc-title">Your Brand, <span class="highlight">Always Moving</span></h3>
+                <p class="svc-desc">Logo animations, kinetic typography, dynamic intros, and visual effects that make your brand impossible to ignore. Motion that communicates, not just decorates.</p>
+                <ul class="svc-includes">
+                    <li>Logo &amp; brand animation</li>
+                    <li>Kinetic typography</li>
+                    <li>Lower thirds &amp; overlays</li>
+                    <li>Animated infographics</li>
+                    <li>Social-format cutdowns</li>
+                </ul>
+                <div class="svc-tags">
+                    <span class="svc-tag">Logo Reveals</span>
+                    <span class="svc-tag">Intros / Outros</span>
+                    <span class="svc-tag">Data Viz</span>
+                    <span class="svc-tag">Social Reels</span>
+                </div>
+                <div class="svc-meta">
+                    <span class="svc-meta-item">⚡ From 3 days</span>
+                    <span class="svc-meta-item">💰 From £350</span>
+                </div>
+                <a href="#contact" class="btn btn-primary svc-cta">
+                    <span>Start a Project</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- 4. Character Design (flip) -->
+        <div class="svc-row svc-row--char svc-row--flip reveal-right">
+            <div class="svc-row__demo">
+                <div class="cat-scene">
+                    <!-- Sketchpad -->
+                    <div class="skp-pad">
+                        <!-- Spiral binding -->
+                        <div class="skp-spiral">
+                            <div class="skp-ring"></div><div class="skp-ring"></div><div class="skp-ring"></div>
+                            <div class="skp-ring"></div><div class="skp-ring"></div><div class="skp-ring"></div>
+                        </div>
+                        <!-- Character being drawn: finished parts solid, unfinished dashed -->
+                        <div class="skp-char">
+                            <div class="skp-char-head skp-done"></div>
+                            <div class="skp-char-eye skp-el skp-done"></div>
+                            <div class="skp-char-eye skp-er skp-done"></div>
+                            <div class="skp-char-smile skp-done"></div>
+                            <div class="skp-char-body skp-done"></div>
+                            <div class="skp-char-arm skp-arm-l skp-done"></div>
+                            <div class="skp-char-arm skp-arm-r skp-wip"></div>
+                            <div class="skp-char-leg skp-leg-l skp-wip"></div>
+                            <div class="skp-char-leg skp-leg-r skp-wip"></div>
+                        </div>
+                    </div>
+                    <!-- Pencil leaning against pad -->
+                    <div class="skp-pencil">
+                        <div class="skp-pencil-tip"></div>
+                        <div class="skp-pencil-body"></div>
+                        <div class="skp-pencil-eraser"></div>
+                    </div>
+                    <!-- Colour swatches -->
+                    <div class="skp-swatches">
+                        <div class="skp-swatch" style="background:#7C3AED"></div>
+                        <div class="skp-swatch" style="background:#EC4899"></div>
+                        <div class="skp-swatch" style="background:#3B82F6"></div>
+                        <div class="skp-swatch" style="background:#FBBF24"></div>
+                        <div class="skp-swatch" style="background:#10B981"></div>
+                    </div>
+                    <!-- Ruler -->
+                    <div class="skp-ruler">
+                        <div class="skp-tick"></div><div class="skp-tick"></div><div class="skp-tick"></div>
+                        <div class="skp-tick"></div><div class="skp-tick"></div>
+                    </div>
+                    <span class="cat-sp cat-sp1">★</span>
+                    <span class="cat-sp cat-sp2">✦</span>
+                </div>
+            </div>
+            <div class="svc-row__info">
+                <div class="svc-num-wrap">
+                    <span class="svc-num">04</span>
+                    <span class="svc-pill svc-pill--purple">Character Design</span>
+                </div>
+                <h3 class="svc-title">Characters That <span class="highlight">Live Forever</span></h3>
+                <p class="svc-desc">Original characters designed from scratch to carry your brand across every medium. We develop full character bibles - expressions, colour palettes, personality, and animation guides.</p>
+                <ul class="svc-includes">
+                    <li>Original concept sketches</li>
+                    <li>Full turnaround sheets</li>
+                    <li>Expression &amp; pose library</li>
+                    <li>Character bible &amp; usage guide</li>
+                    <li>Animation-ready rigged files</li>
+                </ul>
+                <div class="svc-tags">
+                    <span class="svc-tag">Brand Mascots</span>
+                    <span class="svc-tag">Series Characters</span>
+                    <span class="svc-tag">Game Characters</span>
+                    <span class="svc-tag">Avatars</span>
+                </div>
+                <div class="svc-meta">
+                    <span class="svc-meta-item">⚡ From 5 days</span>
+                    <span class="svc-meta-item">💰 From £600</span>
+                </div>
+                <a href="#contact" class="btn btn-primary svc-cta">
+                    <span>Start a Project</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- 5. UI Animations -->
+        <div class="svc-row svc-row--ui reveal-left">
+            <div class="svc-row__demo">
+                <div class="bun-scene">
+                    <!-- Phone frame -->
+                    <div class="ui-phone">
+                        <div class="ui-notch"></div>
+                        <div class="ui-screen">
+                            <!-- Header bar -->
+                            <div class="ui-header">
+                                <div class="ui-header-dot"></div>
+                                <div class="ui-header-title"></div>
+                            </div>
+                            <!-- Toggle switch -->
+                            <div class="ui-toggle-row">
+                                <div class="ui-toggle-label"></div>
+                                <div class="ui-toggle">
+                                    <div class="ui-toggle-knob"></div>
+                                </div>
+                            </div>
+                            <!-- Progress bar -->
+                            <div class="ui-progress-track">
+                                <div class="ui-progress-fill"></div>
+                            </div>
+                            <!-- Sliding card -->
+                            <div class="ui-card">
+                                <div class="ui-card-line"></div>
+                                <div class="ui-card-line ui-card-line--short"></div>
+                            </div>
+                            <!-- Floating action button -->
+                            <div class="ui-fab">+</div>
+                        </div>
+                        <div class="ui-home-bar"></div>
+                    </div>
+                    <!-- Cursor outside phone -->
+                    <div class="ui-cursor">&#9654;</div>
+                    <!-- Click ripple -->
+                    <div class="ui-ripple ui-ripple-1"></div>
+                    <div class="ui-ripple ui-ripple-2"></div>
+                    <span class="bun-sp bun-sp1">✦</span>
+                    <span class="bun-sp bun-sp2">✧</span>
+                </div>
+            </div>
+            <div class="svc-row__info">
+                <div class="svc-num-wrap">
+                    <span class="svc-num">05</span>
+                    <span class="svc-pill svc-pill--cyan">UI Animations</span>
+                </div>
+                <h3 class="svc-title">Apps That <span class="highlight">Feel Alive</span></h3>
+                <p class="svc-desc">Micro-interactions, page transitions, onboarding flows, and loading animations that turn a good app into an unforgettable one. Every tap should feel satisfying.</p>
+                <ul class="svc-includes">
+                    <li>Micro-interaction design</li>
+                    <li>Page &amp; component transitions</li>
+                    <li>Lottie / CSS / Rive animations</li>
+                    <li>Onboarding &amp; empty states</li>
+                    <li>Loading &amp; skeleton screens</li>
+                </ul>
+                <div class="svc-tags">
+                    <span class="svc-tag">Mobile Apps</span>
+                    <span class="svc-tag">Web Apps</span>
+                    <span class="svc-tag">SaaS Products</span>
+                    <span class="svc-tag">E-commerce</span>
+                </div>
+                <div class="svc-meta">
+                    <span class="svc-meta-item">⚡ From 3 days</span>
+                    <span class="svc-meta-item">💰 From £400</span>
+                </div>
+                <a href="#contact" class="btn btn-primary svc-cta">
+                    <span>Start a Project</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- 6. Commercial Ads (flip) -->
+        <div class="svc-row svc-row--ads svc-row--flip reveal-right">
+            <div class="svc-row__demo">
+                <div class="fox-scene">
+                    <!-- TV / monitor frame -->
+                    <div class="tv-monitor">
+                        <div class="tv-bezel">
+                            <div class="tv-screen">
+                                <!-- Animated ad content -->
+                                <div class="tv-badge">NEW!</div>
+                                <div class="tv-product">
+                                    <div class="tv-shine"></div>
+                                </div>
+                                <div class="tv-price">£99</div>
+                                <div class="tv-btn">Buy Now</div>
+                                <!-- Confetti -->
+                                <div class="tv-conf tv-c1">✦</div>
+                                <div class="tv-conf tv-c2">★</div>
+                                <div class="tv-conf tv-c3">✧</div>
+                                <div class="tv-conf tv-c4">●</div>
+                            </div>
+                        </div>
+                        <!-- TV stand -->
+                        <div class="tv-stand-neck"></div>
+                        <div class="tv-stand-base"></div>
+                    </div>
+                    <!-- Broadcast signal waves -->
+                    <div class="tv-signal tv-sig1"></div>
+                    <div class="tv-signal tv-sig2"></div>
+                    <div class="tv-signal tv-sig3"></div>
+                    <span class="fox-sp fox-sp1">✦</span>
+                    <span class="fox-sp fox-sp2">★</span>
+                </div>
+            </div>
+            <div class="svc-row__info">
+                <div class="svc-num-wrap">
+                    <span class="svc-num">06</span>
+                    <span class="svc-pill svc-pill--orange">Commercial Ads</span>
+                </div>
+                <h3 class="svc-title">Ads That <span class="highlight">Stop the Scroll</span></h3>
+                <p class="svc-desc">Eye-catching animated ads built to perform - not just look good. From 6-second bumpers to 60-second brand films, we craft every second to maximise attention and drive action.</p>
+                <ul class="svc-includes">
+                    <li>Concept &amp; script development</li>
+                    <li>Animated ad production</li>
+                    <li>Platform-specific cutdowns</li>
+                    <li>A/B variant creation</li>
+                    <li>Captions &amp; subtitle files</li>
+                </ul>
+                <div class="svc-tags">
+                    <span class="svc-tag">YouTube Ads</span>
+                    <span class="svc-tag">Meta / TikTok</span>
+                    <span class="svc-tag">TV Commercials</span>
+                    <span class="svc-tag">OOH Screens</span>
+                </div>
+                <div class="svc-meta">
+                    <span class="svc-meta-item">⚡ From 5 days</span>
+                    <span class="svc-meta-item">💰 From £900</span>
+                </div>
+                <a href="#contact" class="btn btn-primary svc-cta">
+                    <span>Start a Project</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Video Showcase Section -->
+    <section id="work" class="work">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Our Portfolio</span>
+                <h2 class="section-title">Featured <span class="highlight">Work</span></h2>
+                <p class="section-subtitle">Real projects. Real results. A small taste of what we've built.</p>
+            </div>
+
+            <div class="video-grid">
+                <div class="video-card featured">
+                    <div class="video-thumbnail">
+                        <div class="video-placeholder">
+                            <svg class="vp-thumb" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="s1sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0a0020"/><stop offset="100%" stop-color="#3a0078"/></linearGradient>
+    <radialGradient id="s1sp" cx="50%" cy="100%" r="65%"><stop offset="0%" stop-color="#9333ea" stop-opacity="0.55"/><stop offset="100%" stop-color="#9333ea" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#s1sky)"/>
+  <ellipse cx="400" cy="620" rx="400" ry="220" fill="url(#s1sp)"/>
+  <!-- Stars -->
+  <circle cx="80" cy="45" r="2.5" fill="white" opacity="0.9"/><circle cx="200" cy="30" r="2" fill="white" opacity="0.7"/><circle cx="350" cy="55" r="1.5" fill="white" opacity="0.8"/><circle cx="500" cy="25" r="2.5" fill="white" opacity="0.9"/><circle cx="660" cy="50" r="2" fill="white" opacity="0.7"/><circle cx="750" cy="80" r="1.5" fill="white" opacity="0.8"/><circle cx="130" cy="110" r="1.5" fill="white" opacity="0.5"/><circle cx="600" cy="100" r="2" fill="white" opacity="0.6"/><circle cx="430" cy="90" r="1" fill="white" opacity="0.4"/>
+  <!-- City silhouette -->
+  <rect x="0" y="395" width="800" height="205" fill="#06001a"/>
+  <rect x="0"   y="340" width="55"  height="55"  fill="#06001a"/>
+  <rect x="60"  y="295" width="70"  height="100" fill="#06001a"/>
+  <rect x="135" y="320" width="45"  height="75"  fill="#06001a"/>
+  <rect x="185" y="305" width="60"  height="90"  fill="#06001a"/>
+  <rect x="250" y="350" width="40"  height="45"  fill="#06001a"/>
+  <rect x="535" y="345" width="45"  height="50"  fill="#06001a"/>
+  <rect x="585" y="305" width="65"  height="90"  fill="#06001a"/>
+  <rect x="655" y="325" width="50"  height="70"  fill="#06001a"/>
+  <rect x="710" y="300" width="55"  height="95"  fill="#06001a"/>
+  <rect x="765" y="345" width="35"  height="50"  fill="#06001a"/>
+  <!-- Windows -->
+  <rect x="10"  y="350" width="8" height="8" rx="1" fill="#c084fc" opacity="0.7"/><rect x="24"  y="350" width="8" height="8" rx="1" fill="#f472b6" opacity="0.5"/>
+  <rect x="68"  y="308" width="9" height="9" rx="1" fill="#fbbf24" opacity="0.7"/><rect x="83"  y="308" width="9" height="9" rx="1" fill="#c084fc" opacity="0.5"/><rect x="68" y="324" width="9" height="9" rx="1" fill="#f472b6" opacity="0.6"/><rect x="83" y="324" width="9" height="9" rx="1" fill="#fbbf24" opacity="0.5"/>
+  <rect x="193" y="316" width="9" height="9" rx="1" fill="#c084fc" opacity="0.7"/><rect x="208" y="316" width="9" height="9" rx="1" fill="#f472b6" opacity="0.5"/>
+  <rect x="593" y="316" width="9" height="9" rx="1" fill="#fbbf24" opacity="0.7"/><rect x="608" y="316" width="9" height="9" rx="1" fill="#c084fc" opacity="0.5"/><rect x="593" y="332" width="9" height="9" rx="1" fill="#f472b6" opacity="0.6"/>
+  <rect x="663" y="337" width="9" height="9" rx="1" fill="#c084fc" opacity="0.6"/><rect x="718" y="313" width="9" height="9" rx="1" fill="#fbbf24" opacity="0.7"/><rect x="733" y="313" width="9" height="9" rx="1" fill="#f472b6" opacity="0.5"/>
+  <!-- Shadow under character -->
+  <ellipse cx="400" cy="494" rx="68" ry="14" fill="black" opacity="0.5"/>
+  <!-- Body -->
+  <rect x="362" y="402" width="76" height="88" rx="14" fill="#7c3aed"/>
+  <!-- Cape behind -->
+  <path d="M 355 478 Q 340 430 370 405 L 430 405 Q 460 430 445 478 Z" fill="#6d28d9"/>
+  <!-- Right arm raised -->
+  <line x1="438" y1="425" x2="492" y2="368" stroke="#fbbf24" stroke-width="20" stroke-linecap="round"/>
+  <!-- Left arm relaxed -->
+  <line x1="362" y1="430" x2="316" y2="468" stroke="#fbbf24" stroke-width="20" stroke-linecap="round"/>
+  <!-- Hands -->
+  <circle cx="493" cy="364" r="15" fill="#fbbf24"/><circle cx="314" cy="470" r="13" fill="#fbbf24"/>
+  <!-- Neck -->
+  <rect x="389" y="375" width="22" height="27" rx="8" fill="#fbbf24"/>
+  <!-- Head -->
+  <circle cx="400" cy="335" r="66" fill="#fbbf24"/>
+  <!-- Hair -->
+  <path d="M 340 315 Q 338 268 372 252 Q 400 240 428 252 Q 462 268 460 315" fill="#d97706"/>
+  <circle cx="340" cy="315" r="12" fill="#d97706"/><circle cx="460" cy="315" r="12" fill="#d97706"/>
+  <!-- Blush -->
+  <ellipse cx="363" cy="352" rx="16" ry="11" fill="#f97316" opacity="0.35"/>
+  <ellipse cx="437" cy="352" rx="16" ry="11" fill="#f97316" opacity="0.35"/>
+  <!-- Eyes -->
+  <ellipse cx="381" cy="328" rx="13" ry="15" fill="white"/>
+  <ellipse cx="419" cy="328" rx="13" ry="15" fill="white"/>
+  <circle cx="384" cy="331" r="8" fill="#1a0040"/>
+  <circle cx="422" cy="331" r="8" fill="#1a0040"/>
+  <circle cx="387" cy="328" r="3.5" fill="white"/><circle cx="425" cy="328" r="3.5" fill="white"/>
+  <!-- Eyebrows -->
+  <path d="M 371 313 Q 381 306 393 313" stroke="#92400e" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+  <path d="M 407 313 Q 419 306 429 313" stroke="#92400e" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+  <!-- Smile + teeth -->
+  <path d="M 379 350 Q 400 368 421 350" fill="white"/>
+  <path d="M 379 350 Q 400 368 421 350" stroke="#92400e" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- Sparkles -->
+  <text x="496" y="308" font-size="28" fill="#fbbf24" font-family="serif">✦</text>
+  <text x="275" y="285" font-size="22" fill="#f472b6" font-family="serif">★</text>
+  <text x="518" y="390" font-size="18" fill="#c084fc" font-family="serif">✧</text>
+  <text x="260" y="380" font-size="16" fill="#fbbf24" font-family="serif">✦</text>
+  <!-- Top label -->
+  <rect x="240" y="28" width="320" height="44" rx="10" fill="rgba(109,40,217,0.75)"/>
+  <text x="400" y="57" text-anchor="middle" fill="white" font-family="Arial,sans-serif" font-size="19" font-weight="bold" letter-spacing="3">BRAND STORY</text>
+</svg>
+                            <div class="vp-cinebar"></div>
+                            <div class="vp-duration">3:42</div>
+                            <div class="vp-title-bar"><span>Brand Story Animation</span></div>
+                            <div class="play-button"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
+                            <div class="video-overlay"></div>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <span class="video-tag">Featured Project</span>
+                        <h3>Brand Story Animation</h3>
+                        <p>A full-length brand origin film for a fintech scale-up - 2D, voice-over, and custom score.</p>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <div class="video-placeholder small">
+                            <svg class="vp-thumb" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="s2bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#03091f"/><stop offset="100%" stop-color="#0d2060"/></linearGradient>
+    <linearGradient id="s2sc" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1e3a8a"/><stop offset="100%" stop-color="#0f1f5c"/></linearGradient>
+    <linearGradient id="s2bar1" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#3b82f6"/><stop offset="100%" stop-color="#06b6d4"/></linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#s2bg)"/>
+  <!-- Grid dots -->
+  <circle cx="100" cy="80"  r="2" fill="#3b82f6" opacity="0.3"/><circle cx="200" cy="60"  r="2" fill="#3b82f6" opacity="0.3"/><circle cx="650" cy="90"  r="2" fill="#06b6d4" opacity="0.3"/><circle cx="720" cy="50"  r="2" fill="#3b82f6" opacity="0.3"/><circle cx="130" cy="420" r="2" fill="#06b6d4" opacity="0.3"/><circle cx="700" cy="430" r="2" fill="#3b82f6" opacity="0.3"/>
+  <!-- Character body (big round blob) -->
+  <ellipse cx="300" cy="320" rx="115" ry="120" fill="#10b981"/>
+  <!-- Belly patch -->
+  <ellipse cx="300" cy="340" rx="70" ry="75" fill="#6ee7b7"/>
+  <!-- Eyes -->
+  <ellipse cx="270" cy="280" rx="22" ry="26" fill="white"/>
+  <ellipse cx="330" cy="280" rx="22" ry="26" fill="white"/>
+  <circle cx="275" cy="285" r="14" fill="#1a0040"/>
+  <circle cx="335" cy="285" r="14" fill="#1a0040"/>
+  <circle cx="280" cy="279" r="6" fill="white"/><circle cx="340" cy="279" r="6" fill="white"/>
+  <!-- Eyebrows raised (happy) -->
+  <path d="M 251 260 Q 270 248 291 258" stroke="#065f46" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M 309 258 Q 330 248 351 260" stroke="#065f46" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <!-- Cheeks -->
+  <ellipse cx="245" cy="308" rx="20" ry="13" fill="#34d399" opacity="0.5"/>
+  <ellipse cx="355" cy="308" rx="20" ry="13" fill="#34d399" opacity="0.5"/>
+  <!-- Big smile -->
+  <path d="M 258 318 Q 300 348 342 318" fill="white"/>
+  <path d="M 258 318 Q 300 348 342 318" stroke="#065f46" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+  <!-- Short arms -->
+  <ellipse cx="192" cy="350" rx="28" ry="18" fill="#10b981" transform="rotate(-30 192 350)"/>
+  <ellipse cx="408" cy="330" rx="28" ry="18" fill="#10b981" transform="rotate(20 408 330)"/>
+  <!-- Tiny hands -->
+  <circle cx="178" cy="362" r="14" fill="#10b981"/><circle cx="420" cy="320" r="14" fill="#10b981"/>
+  <!-- Legs / feet -->
+  <ellipse cx="265" cy="430" rx="30" ry="18" fill="#059669"/>
+  <ellipse cx="335" cy="430" rx="30" ry="18" fill="#059669"/>
+  <!-- Big phone -->
+  <rect x="460" y="100" width="190" height="340" rx="22" fill="#1e293b" stroke="#3b82f6" stroke-width="3"/>
+  <rect x="460" y="100" width="190" height="340" rx="22" fill="none" stroke="#06b6d4" stroke-width="1" opacity="0.5"/>
+  <!-- Phone screen -->
+  <rect x="472" y="128" width="166" height="284" rx="8" fill="url(#s2sc)"/>
+  <!-- Phone notch -->
+  <rect x="530" y="108" width="50" height="12" rx="6" fill="#0f172a"/>
+  <!-- App header -->
+  <rect x="480" y="136" width="150" height="32" rx="6" fill="rgba(59,130,246,0.3)"/>
+  <circle cx="500" cy="152" r="10" fill="#3b82f6" opacity="0.8"/>
+  <rect x="518" y="146" width="80" height="6" rx="3" fill="rgba(255,255,255,0.5)"/>
+  <rect x="518" y="157" width="55" height="5" rx="2" fill="rgba(255,255,255,0.3)"/>
+  <!-- Chart bars -->
+  <rect x="488" y="260" width="22" height="95" rx="4" fill="url(#s2bar1)" opacity="0.9"/>
+  <rect x="516" y="220" width="22" height="135" rx="4" fill="url(#s2bar1)" opacity="0.85"/>
+  <rect x="544" y="245" width="22" height="110" rx="4" fill="url(#s2bar1)" opacity="0.9"/>
+  <rect x="572" y="195" width="22" height="160" rx="4" fill="url(#s2bar1)"/>
+  <rect x="600" y="230" width="22" height="125" rx="4" fill="url(#s2bar1)" opacity="0.85"/>
+  <!-- Chart baseline -->
+  <line x1="480" y1="357" x2="630" y2="357" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+  <!-- Trend line -->
+  <polyline points="499,300 527,255 555,278 583,210 611,242" stroke="#06b6d4" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Data bubbles -->
+  <rect x="86" y="135" width="100" height="36" rx="10" fill="rgba(6,182,212,0.15)" stroke="rgba(6,182,212,0.5)" stroke-width="1.5"/>
+  <text x="136" y="158" text-anchor="middle" fill="#06b6d4" font-family="Arial,sans-serif" font-size="16" font-weight="bold">+28%</text>
+  <rect x="86" y="295" width="100" height="36" rx="10" fill="rgba(59,130,246,0.15)" stroke="rgba(59,130,246,0.5)" stroke-width="1.5"/>
+  <text x="136" y="318" text-anchor="middle" fill="#93c5fd" font-family="Arial,sans-serif" font-size="15" font-weight="bold">&#163;4.2M</text>
+  <!-- Connecting line from character to phone -->
+  <line x1="415" y1="310" x2="460" y2="310" stroke="rgba(255,255,255,0.15)" stroke-width="1" stroke-dasharray="4,4"/>
+</svg>
+                            <div class="vp-cinebar"></div>
+                            <div class="vp-duration">1:15</div>
+                            <div class="play-button"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
+                            <div class="video-overlay"></div>
+                        </div>
+                    </div>
+                    <div class="video-info"><span class="video-tag">Explainer</span><h3>Product Demo</h3><p>App walkthrough for a SaaS platform launch - making features impossible to ignore.</p></div>
+                </div>
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <div class="video-placeholder small">
+                            <svg class="vp-thumb" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="s3bg" cx="50%" cy="60%" r="70%"><stop offset="0%" stop-color="#2d0010"/><stop offset="60%" stop-color="#0e0005"/><stop offset="100%" stop-color="#020002"/></radialGradient>
+    <radialGradient id="s3glow" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#f97316" stop-opacity="0.7"/><stop offset="100%" stop-color="#f97316" stop-opacity="0"/></radialGradient>
+    <linearGradient id="s3sword" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="white"/><stop offset="50%" stop-color="#fed7aa"/><stop offset="100%" stop-color="#f97316" stop-opacity="0"/></linearGradient>
+    <filter id="s3blur"><feGaussianBlur stdDeviation="8"/></filter>
+  </defs>
+  <rect width="800" height="500" fill="url(#s3bg)"/>
+  <!-- Atmosphere glow -->
+  <ellipse cx="400" cy="300" rx="200" ry="160" fill="url(#s3glow)" filter="url(#s3blur)"/>
+  <!-- Stars -->
+  <circle cx="60"  cy="40"  r="1.5" fill="white" opacity="0.7"/><circle cx="150" cy="25"  r="1"   fill="white" opacity="0.5"/><circle cx="260" cy="55"  r="2"   fill="white" opacity="0.6"/><circle cx="380" cy="30"  r="1.5" fill="white" opacity="0.8"/><circle cx="520" cy="45"  r="1"   fill="white" opacity="0.5"/><circle cx="640" cy="20"  r="2"   fill="white" opacity="0.7"/><circle cx="750" cy="60"  r="1.5" fill="white" opacity="0.6"/><circle cx="110" cy="120" r="1"   fill="white" opacity="0.4"/><circle cx="700" cy="100" r="1.5" fill="white" opacity="0.5"/>
+  <!-- Ground / rock platform -->
+  <path d="M 0 420 Q 200 390 400 400 Q 600 390 800 420 L 800 500 L 0 500 Z" fill="#1a0008"/>
+  <path d="M 0 440 Q 200 415 400 420 Q 600 415 800 440 L 800 500 L 0 500 Z" fill="#0d0004"/>
+  <!-- Character legs (dark silhouette parts) -->
+  <rect x="368" y="390" width="28" height="28" rx="4" fill="#1e0a30"/>
+  <rect x="404" y="390" width="28" height="418" rx="4" fill="#1e0a30"/>
+  <!-- Character body (armoured) -->
+  <path d="M 340 260 L 320 390 L 480 390 L 460 260 Z" fill="#1e0a30"/>
+  <!-- Armor details -->
+  <path d="M 355 280 L 445 280" stroke="#f97316" stroke-width="2" opacity="0.6"/>
+  <path d="M 348 305 L 452 305" stroke="#f97316" stroke-width="1.5" opacity="0.4"/>
+  <path d="M 344 330 L 456 330" stroke="#f97316" stroke-width="1.5" opacity="0.4"/>
+  <path d="M 342 355 L 458 355" stroke="#f97316" stroke-width="1.5" opacity="0.3"/>
+  <!-- Shoulder pads -->
+  <path d="M 315 260 Q 320 240 360 248 L 360 272 Q 330 270 315 260 Z" fill="#2d1040"/>
+  <path d="M 485 260 Q 480 240 440 248 L 440 272 Q 470 270 485 260 Z" fill="#2d1040"/>
+  <!-- Shoulder spikes -->
+  <polygon points="310,255 295,235 320,248" fill="#f97316" opacity="0.8"/>
+  <polygon points="490,255 505,235 480,248" fill="#f97316" opacity="0.8"/>
+  <!-- Right arm holding sword up -->
+  <line x1="460" y1="270" x2="510" y2="180" stroke="#2d1040" stroke-width="28" stroke-linecap="round"/>
+  <line x1="460" y1="270" x2="510" y2="180" stroke="#1e0a30" stroke-width="22" stroke-linecap="round"/>
+  <!-- Left arm down -->
+  <line x1="340" y1="280" x2="290" y2="350" stroke="#2d1040" stroke-width="28" stroke-linecap="round"/>
+  <!-- Neck -->
+  <rect x="385" y="235" width="30" height="25" rx="6" fill="#1e0a30"/>
+  <!-- Helmet -->
+  <path d="M 340 245 Q 335 185 400 170 Q 465 185 460 245 Z" fill="#1e0a30"/>
+  <!-- Helmet visor glow -->
+  <path d="M 355 225 Q 400 215 445 225 L 445 235 Q 400 245 355 235 Z" fill="#f97316" opacity="0.8"/>
+  <path d="M 355 225 Q 400 215 445 225 L 445 235 Q 400 245 355 235 Z" fill="none" stroke="#fed7aa" stroke-width="1"/>
+  <!-- Helmet crest/horn -->
+  <polygon points="400,170 390,140 400,135 410,140" fill="#f97316"/>
+  <!-- SWORD -->
+  <!-- Blade -->
+  <rect x="498" y="70" width="14" height="130" rx="4" fill="url(#s3sword)"/>
+  <!-- Crossguard -->
+  <rect x="478" y="192" width="54" height="10" rx="4" fill="#d4a017"/>
+  <polygon points="478,192 465,197 478,202" fill="#d4a017"/>
+  <polygon points="532,192 545,197 532,202" fill="#d4a017"/>
+  <!-- Handle -->
+  <rect x="499" y="202" width="12" height="38" rx="4" fill="#92400e"/>
+  <!-- Sword glow -->
+  <rect x="494" y="70" width="22" height="125" rx="5" fill="#f97316" opacity="0.25" filter="url(#s3blur)"/>
+  <rect x="499" y="70" width="12" height="10" rx="4" fill="white" opacity="0.9"/>
+  <!-- Sparks / embers -->
+  <circle cx="480" cy="90"  r="3" fill="#fbbf24" opacity="0.9"/><circle cx="545" cy="110" r="2" fill="#f97316" opacity="0.8"/><circle cx="460" cy="130" r="2.5" fill="#fbbf24" opacity="0.7"/><circle cx="555" cy="150" r="2" fill="#fed7aa" opacity="0.9"/><circle cx="470" cy="160" r="1.5" fill="#f97316" opacity="0.6"/>
+  <!-- Ground glow -->
+  <ellipse cx="400" cy="410" rx="120" ry="20" fill="#f97316" opacity="0.15" filter="url(#s3blur)"/>
+  <!-- Title -->
+  <rect x="240" y="28" width="320" height="44" rx="10" fill="rgba(180,30,10,0.65)"/>
+  <text x="400" y="57" text-anchor="middle" fill="white" font-family="Arial,sans-serif" font-size="19" font-weight="bold" letter-spacing="3">GAME TRAILER</text>
+</svg>
+                            <div class="vp-cinebar"></div>
+                            <div class="vp-duration">0:45</div>
+                            <div class="play-button"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
+                            <div class="video-overlay"></div>
+                        </div>
+                    </div>
+                    <div class="video-info"><span class="video-tag">3D Animation</span><h3>Game Trailer</h3><p>Cinematic 3D trailer for an indie action RPG - built to build hype before release.</p></div>
+                </div>
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <div class="video-placeholder small">
+                            <svg class="vp-thumb" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="s4bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#020210"/><stop offset="100%" stop-color="#080830"/></linearGradient>
+    <linearGradient id="s4hex" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#7c3aed"/><stop offset="100%" stop-color="#ec4899"/></linearGradient>
+    <radialGradient id="s4glow" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#7c3aed" stop-opacity="0.6"/><stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/></radialGradient>
+    <filter id="s4blur"><feGaussianBlur stdDeviation="10"/></filter>
+    <filter id="s4blur2"><feGaussianBlur stdDeviation="3"/></filter>
+  </defs>
+  <rect width="800" height="500" fill="url(#s4bg)"/>
+  <!-- Grid -->
+  <line x1="0" y1="166" x2="800" y2="166" stroke="rgba(124,58,237,0.12)" stroke-width="1"/>
+  <line x1="0" y1="333" x2="800" y2="333" stroke="rgba(124,58,237,0.12)" stroke-width="1"/>
+  <line x1="266" y1="0" x2="266" y2="500" stroke="rgba(124,58,237,0.12)" stroke-width="1"/>
+  <line x1="533" y1="0" x2="533" y2="500" stroke="rgba(124,58,237,0.12)" stroke-width="1"/>
+  <!-- Glow behind hex -->
+  <ellipse cx="400" cy="250" rx="180" ry="180" fill="url(#s4glow)" filter="url(#s4blur)"/>
+  <!-- Orbit rings -->
+  <ellipse cx="400" cy="250" rx="175" ry="175" fill="none" stroke="rgba(124,58,237,0.35)" stroke-width="1.5"/>
+  <ellipse cx="400" cy="250" rx="235" ry="235" fill="none" stroke="rgba(236,72,153,0.25)" stroke-width="1"/>
+  <!-- Orbit dots -->
+  <circle cx="225" cy="250" r="8" fill="#7c3aed" filter="url(#s4blur2)"/>
+  <circle cx="225" cy="250" r="5" fill="#a78bfa"/>
+  <circle cx="565" cy="150" r="7" fill="#ec4899" filter="url(#s4blur2)"/>
+  <circle cx="565" cy="150" r="4" fill="#f9a8d4"/>
+  <circle cx="400" cy="15"  r="6" fill="#06b6d4" filter="url(#s4blur2)"/>
+  <circle cx="400" cy="15"  r="4" fill="#67e8f9"/>
+  <!-- Hexagon main shape -->
+  <polygon points="400,120 480,165 480,255 400,300 320,255 320,165" fill="url(#s4hex)" opacity="0.95"/>
+  <!-- Hex inner cutout -->
+  <polygon points="400,148 462,183 462,252 400,287 338,252 338,183" fill="#050520"/>
+  <!-- "A" letter inside hex -->
+  <text x="400" y="248" text-anchor="middle" fill="url(#s4hex)" font-family="Arial,sans-serif" font-size="80" font-weight="900">A</text>
+  <!-- Hex glow edges -->
+  <polygon points="400,120 480,165 480,255 400,300 320,255 320,165" fill="none" stroke="#a78bfa" stroke-width="2"/>
+  <!-- Light trails from corners -->
+  <line x1="480" y1="165" x2="600" y2="100" stroke="rgba(124,58,237,0.4)" stroke-width="1.5"/>
+  <line x1="480" y1="255" x2="620" y2="310" stroke="rgba(236,72,153,0.35)" stroke-width="1.5"/>
+  <line x1="320" y1="165" x2="180" y2="100" stroke="rgba(124,58,237,0.4)" stroke-width="1.5"/>
+  <line x1="320" y1="255" x2="170" y2="310" stroke="rgba(236,72,153,0.35)" stroke-width="1.5"/>
+  <line x1="400" y1="120" x2="400" y2="40"  stroke="rgba(6,182,212,0.4)" stroke-width="1.5"/>
+  <line x1="400" y1="300" x2="400" y2="400" stroke="rgba(249,115,22,0.35)" stroke-width="1.5"/>
+  <!-- Brand text -->
+  <text x="400" y="390" text-anchor="middle" fill="white" font-family="Arial,sans-serif" font-size="28" font-weight="900" letter-spacing="10" opacity="0.9">ANIMOTION</text>
+  <text x="400" y="420" text-anchor="middle" fill="rgba(167,139,250,0.7)" font-family="Arial,sans-serif" font-size="12" letter-spacing="5">LOGO REVEAL</text>
+  <!-- Sparkle dots -->
+  <circle cx="150" cy="180" r="3" fill="#a78bfa" opacity="0.8"/><circle cx="660" cy="160" r="3" fill="#f9a8d4" opacity="0.8"/><circle cx="130" cy="350" r="2" fill="#67e8f9" opacity="0.7"/><circle cx="680" cy="370" r="2" fill="#a78bfa" opacity="0.6"/>
+</svg>
+                            <div class="vp-cinebar"></div>
+                            <div class="vp-duration">0:12</div>
+                            <div class="play-button"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
+                            <div class="video-overlay"></div>
+                        </div>
+                    </div>
+                    <div class="video-info"><span class="video-tag">Motion Graphics</span><h3>Logo Animation</h3><p>A snappy 12-second logo reveal used across social, broadcast, and presentations.</p></div>
+                </div>
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <div class="video-placeholder small">
+                            <svg class="vp-thumb" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="s5bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#1a0535"/><stop offset="50%" stop-color="#3b0f6b"/><stop offset="100%" stop-color="#1a0535"/></linearGradient>
+    <radialGradient id="s5gL" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#f97316" stop-opacity="0.25"/><stop offset="100%" stop-color="#f97316" stop-opacity="0"/></radialGradient>
+    <radialGradient id="s5gC" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#7c3aed" stop-opacity="0.3"/><stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/></radialGradient>
+    <radialGradient id="s5gR" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#ec4899" stop-opacity="0.25"/><stop offset="100%" stop-color="#ec4899" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#s5bg)"/>
+  <!-- Glows under each character -->
+  <ellipse cx="185" cy="430" rx="120" ry="50" fill="url(#s5gL)"/>
+  <ellipse cx="400" cy="420" rx="150" ry="60" fill="url(#s5gC)"/>
+  <ellipse cx="615" cy="430" rx="120" ry="50" fill="url(s5gR)"/>
+  <!-- Sparkles background -->
+  <text x="80"  y="80"  font-size="20" fill="#fbbf24" font-family="serif" opacity="0.8">✦</text>
+  <text x="680" y="70"  font-size="24" fill="#f472b6" font-family="serif" opacity="0.7">★</text>
+  <text x="50"  y="200" font-size="16" fill="#c084fc" font-family="serif" opacity="0.6">✧</text>
+  <text x="720" y="200" font-size="18" fill="#fbbf24" font-family="serif" opacity="0.7">✦</text>
+  <text x="380" y="55"  font-size="22" fill="#34d399" font-family="serif" opacity="0.7">★</text>
+  <text x="160" y="130" font-size="14" fill="#f472b6" font-family="serif" opacity="0.5">✧</text>
+  <text x="600" y="140" font-size="16" fill="#fbbf24" font-family="serif" opacity="0.6">✦</text>
+  <!-- ── LEFT CHARACTER — orange cat ── -->
+  <!-- Shadow -->
+  <ellipse cx="185" cy="445" rx="70" ry="14" fill="black" opacity="0.35"/>
+  <!-- Body -->
+  <ellipse cx="185" cy="360" rx="68" ry="75" fill="#f97316"/>
+  <!-- Belly -->
+  <ellipse cx="185" cy="375" rx="42" ry="48" fill="#fed7aa"/>
+  <!-- Tail -->
+  <path d="M 248 400 Q 300 380 310 340 Q 320 305 295 300" stroke="#f97316" stroke-width="18" fill="none" stroke-linecap="round"/>
+  <!-- Left arm wave -->
+  <line x1="120" y1="345" x2="72"  y2="295" stroke="#f97316" stroke-width="20" stroke-linecap="round"/>
+  <!-- Right arm -->
+  <line x1="250" y1="350" x2="285" y2="385" stroke="#f97316" stroke-width="18" stroke-linecap="round"/>
+  <!-- Hands -->
+  <circle cx="70"  cy="290" r="14" fill="#f97316"/>
+  <circle cx="288" cy="388" r="12" fill="#f97316"/>
+  <!-- Head -->
+  <circle cx="185" cy="240" r="72" fill="#f97316"/>
+  <!-- Cat ears -->
+  <polygon points="140,185 120,135 175,180" fill="#f97316"/>
+  <polygon points="230,185 250,135 195,180" fill="#f97316"/>
+  <polygon points="143,183 128,148 170,178" fill="#f9a8d4" opacity="0.7"/>
+  <polygon points="227,183 242,148 200,178" fill="#f9a8d4" opacity="0.7"/>
+  <!-- Eyes wide -->
+  <ellipse cx="162" cy="234" rx="18" ry="21" fill="white"/>
+  <ellipse cx="208" cy="234" rx="18" ry="21" fill="white"/>
+  <circle cx="166" cy="238" r="11" fill="#92400e"/>
+  <circle cx="212" cy="238" r="11" fill="#92400e"/>
+  <circle cx="170" cy="233" r="5" fill="white"/><circle cx="216" cy="233" r="5" fill="white"/>
+  <!-- Blush -->
+  <ellipse cx="143" cy="256" rx="17" ry="11" fill="#f472b6" opacity="0.5"/>
+  <ellipse cx="227" cy="256" rx="17" ry="11" fill="#f472b6" opacity="0.5"/>
+  <!-- Smile -->
+  <path d="M 164 268 Q 185 284 206 268" fill="#fff7ed"/>
+  <path d="M 164 268 Q 185 284 206 268" stroke="#92400e" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- Whiskers -->
+  <line x1="115" y1="258" x2="158" y2="265" stroke="#92400e" stroke-width="1.5" opacity="0.5"/>
+  <line x1="115" y1="270" x2="158" y2="272" stroke="#92400e" stroke-width="1.5" opacity="0.5"/>
+  <line x1="212" y1="265" x2="255" y2="258" stroke="#92400e" stroke-width="1.5" opacity="0.5"/>
+  <line x1="212" y1="272" x2="255" y2="270" stroke="#92400e" stroke-width="1.5" opacity="0.5"/>
+  <!-- Nose -->
+  <ellipse cx="185" cy="260" rx="6" ry="4" fill="#f472b6"/>
+  <!-- ── CENTER CHARACTER — purple alien (larger) ── -->
+  <!-- Shadow -->
+  <ellipse cx="400" cy="445" rx="85" ry="16" fill="black" opacity="0.4"/>
+  <!-- Body -->
+  <ellipse cx="400" cy="355" rx="82" ry="90" fill="#7c3aed"/>
+  <!-- Belly -->
+  <ellipse cx="400" cy="375" rx="50" ry="58" fill="#a78bfa"/>
+  <!-- Antennae -->
+  <line x1="374" y1="170" x2="350" y2="100" stroke="#7c3aed" stroke-width="6" stroke-linecap="round"/>
+  <line x1="426" y1="170" x2="450" y2="100" stroke="#7c3aed" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="348" cy="96"  r="12" fill="#ec4899"/>
+  <circle cx="452" cy="96"  r="12" fill="#fbbf24"/>
+  <!-- Arms both raised -->
+  <line x1="322" y1="330" x2="268" y2="268" stroke="#7c3aed" stroke-width="22" stroke-linecap="round"/>
+  <line x1="478" y1="330" x2="532" y2="268" stroke="#7c3aed" stroke-width="22" stroke-linecap="round"/>
+  <circle cx="264" cy="262" r="16" fill="#7c3aed"/>
+  <circle cx="536" cy="262" r="16" fill="#7c3aed"/>
+  <!-- Head -->
+  <ellipse cx="400" cy="210" rx="82" ry="78" fill="#7c3aed"/>
+  <!-- Eyes (big) -->
+  <ellipse cx="374" cy="205" rx="22" ry="26" fill="white"/>
+  <ellipse cx="426" cy="205" rx="22" ry="26" fill="white"/>
+  <circle cx="378" cy="210" r="14" fill="#1a0040"/>
+  <circle cx="430" cy="210" r="14" fill="#1a0040"/>
+  <circle cx="382" cy="204" r="6" fill="white"/><circle cx="434" cy="204" r="6" fill="white"/>
+  <!-- Blush -->
+  <ellipse cx="350" cy="228" rx="18" ry="12" fill="#ec4899" opacity="0.4"/>
+  <ellipse cx="450" cy="228" rx="18" ry="12" fill="#ec4899" opacity="0.4"/>
+  <!-- Smile big -->
+  <path d="M 366 238 Q 400 260 434 238" fill="white"/>
+  <path d="M 366 238 Q 400 260 434 238" stroke="#1a0040" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- Small spots on body -->
+  <circle cx="380" cy="340" r="6" fill="#6d28d9" opacity="0.6"/><circle cx="420" cy="350" r="5" fill="#6d28d9" opacity="0.5"/><circle cx="400" cy="320" r="4" fill="#6d28d9" opacity="0.4"/>
+  <!-- ── RIGHT CHARACTER — pink fox ── -->
+  <!-- Shadow -->
+  <ellipse cx="615" cy="445" rx="70" ry="14" fill="black" opacity="0.35"/>
+  <!-- Tail -->
+  <path d="M 552 400 Q 500 375 488 335 Q 478 300 502 298" stroke="#ec4899" stroke-width="20" fill="none" stroke-linecap="round"/>
+  <path d="M 552 400 Q 500 375 488 335 Q 478 300 502 298" stroke="#fecdd3" stroke-width="10" fill="none" stroke-linecap="round"/>
+  <!-- Body -->
+  <ellipse cx="615" cy="360" rx="68" ry="75" fill="#ec4899"/>
+  <!-- Belly -->
+  <ellipse cx="615" cy="378" rx="40" ry="50" fill="#fce7f3"/>
+  <!-- Left arm wave -->
+  <line x1="680" y1="340" x2="728" y2="292" stroke="#ec4899" stroke-width="20" stroke-linecap="round"/>
+  <!-- Right arm -->
+  <line x1="550" y1="352" x2="520" y2="382" stroke="#ec4899" stroke-width="18" stroke-linecap="round"/>
+  <circle cx="730" cy="288" r="14" fill="#ec4899"/>
+  <circle cx="517" cy="385" r="12" fill="#ec4899"/>
+  <!-- Head -->
+  <circle cx="615" cy="240" r="72" fill="#ec4899"/>
+  <!-- Fox ears (pointy) -->
+  <polygon points="570,185 548,128 608,180" fill="#ec4899"/>
+  <polygon points="660,185 682,128 622,180" fill="#ec4899"/>
+  <polygon points="572,183 555,145 604,178" fill="#fce7f3" opacity="0.8"/>
+  <polygon points="658,183 665,145 626,178" fill="#fce7f3" opacity="0.8"/>
+  <!-- Eyes -->
+  <ellipse cx="592" cy="234" rx="18" ry="21" fill="white"/>
+  <ellipse cx="638" cy="234" rx="18" ry="21" fill="white"/>
+  <circle cx="596" cy="238" r="11" fill="#9d174d"/>
+  <circle cx="642" cy="238" r="11" fill="#9d174d"/>
+  <circle cx="600" cy="233" r="5" fill="white"/><circle cx="646" cy="233" r="5" fill="white"/>
+  <!-- Blush -->
+  <ellipse cx="573" cy="255" rx="17" ry="11" fill="#fb7185" opacity="0.5"/>
+  <ellipse cx="657" cy="255" rx="17" ry="11" fill="#fb7185" opacity="0.5"/>
+  <!-- Nose -->
+  <ellipse cx="615" cy="258" rx="7" ry="5" fill="#9d174d"/>
+  <!-- Smile -->
+  <path d="M 594 270 Q 615 286 636 270" fill="#fce7f3"/>
+  <path d="M 594 270 Q 615 286 636 270" stroke="#9d174d" stroke-width="3" fill="none" stroke-linecap="round"/>
+</svg>
+                            <div class="vp-cinebar"></div>
+                            <div class="vp-duration">2:05</div>
+                            <div class="play-button"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
+                            <div class="video-overlay"></div>
+                        </div>
+                    </div>
+                    <div class="video-info"><span class="video-tag">Character</span><h3>Mascot Series</h3><p>Three original brand mascots designed for a kids app - each with their own personality.</p></div>
+                </div>            </div>
+
+            <div class="work-cta">
+                <a href="#" class="btn btn-primary">View All Projects</a>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <!-- Floating confetti -->
+        <div class="contact-confetti">
+            <span>⭐</span><span>🌟</span><span>✨</span><span>💫</span><span>★</span><span>✦</span><span>✶</span><span>✵</span><span>⭐</span><span>🌟</span><span>✨</span><span>💫</span>
+        </div>
+
+        <div class="container">
+            <div class="contact-layout">
+
+                <!-- Left: info + mascot -->
+                <div class="contact-info">
+                    <span class="section-tag">Get In Touch</span>
+                    <h2 class="section-title">Let's Make<br><span class="highlight">Something Amazing</span></h2>
+                    <p class="contact-intro">Have a project in mind? Drop us a message and we'll get back to you within 24 hours. No boring briefs - just bring your wildest idea.</p>
+
+                    <div class="contact-details">
+                        <div class="contact-detail">
+                            <span class="detail-icon">📧</span>
+                            <div>
+                                <span class="detail-label">Email Us</span>
+                                <span class="detail-value">hello@animotion.com</span>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <span class="detail-icon">📞</span>
+                            <div>
+                                <span class="detail-label">Call Us</span>
+                                <span class="detail-value">0800 XXX XXX</span>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <span class="detail-icon">⚡</span>
+                            <div>
+                                <span class="detail-label">Response Time</span>
+                                <span class="detail-value">Within 24 hours</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bouncy contact mascot -->
+                    <div class="contact-mascot-wrap">
+                        <div class="contact-mascot">
+                            <div class="cm-body">
+                                <div class="cm-face">
+                                    <div class="cm-eyes">
+                                        <div class="cm-eye l"><div class="cm-pupil"></div></div>
+                                        <div class="cm-eye r"><div class="cm-pupil"></div></div>
+                                    </div>
+                                    <div class="cm-mouth"></div>
+                                    <div class="cm-blush l"></div>
+                                    <div class="cm-blush r"></div>
+                                </div>
+                                <div class="cm-arm l"></div>
+                                <div class="cm-arm r"></div>
+                            </div>
+                            <div class="cm-shadow"></div>
+                        </div>
+                        <div class="cm-bubble">We'd love to hear from you! 👋</div>
+                    </div>
+                </div>
+
+                <!-- Right: form -->
+                <div class="contact-form-wrap">
+                    <div class="form-deco fd1"></div>
+                    <div class="form-deco fd2"></div>
+                    <div class="form-deco fd3"></div>
+                    <div class="form-card-header">
+                        <p class="form-card-sub">Fill in the details and we'll get back to you faster than you can say "animation".</p>
+                        <div class="fps-bar"><div class="fps-fill" id="formProgressBar"></div></div>
+                        <div class="fps-label" id="formProgressLabel">Start filling in your details...</div>
+                    </div>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group fg-icon">
+                                <label for="contactName"><span class="fg-emoji">&#128100;</span> Your Name</label>
+                                <input type="text" id="contactName" name="name" placeholder="Ani Motion" required>
+                                <span class="fg-check">&#10003;</span>
+                            </div>
+                            <div class="form-group fg-icon">
+                                <label for="contactEmail"><span class="fg-emoji">&#9993;</span> Email Address</label>
+                                <input type="email" id="contactEmail" name="email" placeholder="animotion@example.com" required>
+                                <span class="fg-check">&#10003;</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label><span class="fg-emoji">&#127916;</span> What are you after?</label>
+                            <div class="service-chips">
+                                <label class="chip"><input type="checkbox" name="service" value="2d"> 2D Animation</label>
+                                <label class="chip"><input type="checkbox" name="service" value="3d"> 3D Animation</label>
+                                <label class="chip"><input type="checkbox" name="service" value="motion"> Motion Graphics</label>
+                                <label class="chip"><input type="checkbox" name="service" value="character"> Character Design</label>
+                                <label class="chip"><input type="checkbox" name="service" value="mascot"> Brand Mascot</label>
+                                <label class="chip"><input type="checkbox" name="service" value="ads"> Commercial Ads</label>
+                            </div>
+                        </div>
+                        <div class="form-group fg-icon">
+                            <label for="contactBudget"><span class="fg-emoji">£</span> Budget Range</label>
+                            <select id="contactBudget" name="budget">
+                                <option value="" disabled selected>Pick a range...</option>
+                                <option value="starter">Starter - Under £1,000</option>
+                                <option value="small">Small Project - £1k–£5k</option>
+                                <option value="medium">Medium - £5k–£15k</option>
+                                <option value="large">Large - £15k–£50k</option>
+                                <option value="enterprise">Enterprise - £50k+</option>
+                                <option value="tbd">Not sure yet</option>
+                            </select>
+                            <span class="fg-check fg-check--select">&#10003;</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactMessage"><span class="fg-emoji">&#128172;</span> Tell us about your project</label>
+                            <textarea id="contactMessage" name="message" rows="5" placeholder="We're re-launching our brand and need a mascot that bounces off walls..."></textarea>
+                            <div class="fg-counter"><span id="msgCount">0</span> / 500</div>
+                        </div>
+                        <button type="submit" class="btn-fun-submit" id="submitBtn">
+                            <span class="bfs-text">Send It</span>
+                            <span class="bfs-rocket">&#128640;</span>
+                            <span class="bfs-sending">Launching...</span>
+                        </button>
+                        <div class="form-success" id="formSuccess">
+                            <div class="fs-emoji">&#127881;</div>
+                            <div class="fs-title">You're awesome!</div>
+                            <div class="fs-body">Message received. We'll be in touch within 24 hours.</div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <span class="logo-ani">Ani</span><span class="logo-motion">Motion</span>
+                    </a>
+                    <p>Bold animation. Real results. Delivered on time.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram">📸</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                        <a href="#" aria-label="YouTube">🎬</a>
+                        <a href="#" aria-label="LinkedIn">💼</a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="#">2D Animation</a></li>
+                            <li><a href="#">3D Animation</a></li>
+                            <li><a href="#">Motion Graphics</a></li>
+                            <li><a href="#">Character Design</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Our Work</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Contact</h4>
+                        <ul>
+                            <li>hello@animotion.com</li>
+                            <li>+44 (0) 20 7946 0821</li>
+                            <li>Studio 7, The Custard Factory</li>
+                            <li>Birmingham, B5 5PA</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 AniMotion. All rights reserved. Made with 💜 and lots of keyframes.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="cursor-dot"></div>
+    <div id="cursor-ring"></div>
+        <script src="script.js"></script>
+</body>
+</html>
