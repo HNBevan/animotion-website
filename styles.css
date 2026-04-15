@@ -4150,6 +4150,13 @@ body {
    RESPONSIVE — Large tablet, small tablet, mobile landscape
    ============================================================ */
 
+/* ── Z Fold 7 unfolded portrait (~860px–920px, portrait) ── */
+/* Pull the alien visual higher on the tall inner screen */
+@media (min-width: 860px) and (max-width: 920px) and (orientation: portrait) {
+    .hero-content { align-items: flex-start; }
+    .hero-visual { margin-top: -60px; }
+}
+
 /* ── Large tablet portrait (769px – 1024px) ── */
 /* Restore 2-col hero layout — there's enough room */
 @media (min-width: 769px) and (max-width: 1024px) {
