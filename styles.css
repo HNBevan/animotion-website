@@ -4154,7 +4154,7 @@ body {
 /* Pull the alien visual higher on the tall inner screen */
 @media (min-width: 860px) and (max-width: 920px) and (orientation: portrait) {
     .hero-content { align-items: flex-start; }
-    .hero-visual { margin-top: -60px; }
+    .hero-visual { margin-top: -120px; }
 }
 
 /* ── Large tablet portrait (769px – 1024px) ── */
