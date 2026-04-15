@@ -3975,12 +3975,13 @@ body {
     .hero-visual { height: 340px; }
     .floating-shapes { display: none; }
     .alien-hint {
-        width: calc(100% - 40px);
-        max-width: calc(100% - 40px);
-        left: 20px;
-        right: 20px;
+        width: calc(100% - 48px);
+        max-width: calc(100% - 48px);
+        left: 24px;
+        right: 24px;
         transform: none;
-        padding: 0 4px;
+        padding: 0 8px;
+        box-sizing: border-box;
     }
 
     .scroll-indicator {
@@ -4089,9 +4090,6 @@ body {
     .svc-cta { overflow: hidden; }
     .svc-cta::before { display: none; }
 
-    /* Hide custom cursor on touch devices */
-    #cursor-dot { display: none; }
-    * { cursor: auto !important; }
 
     /* Edge peek chars — smaller on mobile */
     .peek-head { font-size: 60px; }
@@ -4279,7 +4277,7 @@ body {
     .navbar { padding: 10px 20px; }
 
     /* About / stats compact */
-    .stats-grid { grid-template-columns: repeat(4, 1fr); }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
     .stat-number { font-size: 2rem; }
     .about-content { grid-template-columns: 1fr 1fr; gap: 32px; }
     .about-text { text-align: left; }
@@ -4386,13 +4384,16 @@ body {
     .hero {
         padding: 100px 56px 60px;
         min-height: 100vh;
+        flex-direction: column;
         align-items: center;
+        justify-content: center;
     }
     .hero-content {
         grid-template-columns: 1fr 1fr;
         text-align: left;
         gap: 40px;
         align-items: center;
+        width: 100%;
     }
     .hero-text  { order: 1; }
     .hero-visual { order: 2; height: 400px; }
@@ -4401,13 +4402,17 @@ body {
     .hero-title { font-size: clamp(2rem, 4vw, 3.2rem); }
     .mobile-play-hint { display: none; }
 
+    /* Flow the scroll indicator below the hero content so it clears the instructions */
     .scroll-indicator {
-        position: absolute;
-        bottom: 32px;
-        left: 50%;
-        transform: translateX(-50%);
-        margin-top: 0;
+        position: relative;
+        bottom: auto;
+        left: auto;
+        transform: none;
+        margin-top: 32px;
+        align-self: center;
         opacity: 1;
+        animation: none;
+        width: fit-content;
     }
 
     /* Grids */
@@ -8048,7 +8053,16 @@ body {
 
 
 /* ===== Custom Cursor ===== */
-*, *::before, *::after { cursor: none !important; }
+/* Only hide the system cursor on true pointer (mouse) devices */
+@media (hover: hover) and (pointer: fine) {
+    *, *::before, *::after { cursor: none !important; }
+}
+
+/* On touch screens — hide the custom dot and restore normal cursor */
+@media (hover: none), (pointer: coarse) {
+    #cursor-dot { display: none !important; }
+    * { cursor: auto !important; }
+}
 
 #cursor-dot {
     position: fixed;
