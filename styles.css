@@ -4150,13 +4150,6 @@ body {
    RESPONSIVE — Large tablet, small tablet, mobile landscape
    ============================================================ */
 
-/* ── Z Fold 7 unfolded portrait (~860px–920px, portrait) ── */
-/* Pull the alien visual higher on the tall inner screen */
-@media (min-width: 860px) and (max-width: 920px) and (orientation: portrait) {
-    .hero-content { align-items: flex-start; }
-    .hero-visual { margin-top: -120px; }
-}
-
 /* ── Large tablet portrait (769px – 1024px) ── */
 /* Restore 2-col hero layout — there's enough room */
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -4469,6 +4462,13 @@ body {
     .hero-buttons { gap: 8px; }
     .btn { padding: 8px 16px; font-size: 0.78rem; }
     .mobile-play-hint { font-size: 0.65rem; margin-bottom: 6px; }
+}
+
+/* ── Z Fold 7 unfolded portrait — alien position fix ── */
+/* Inner screen portrait is ~700px–800px wide and tall (>900px).        */
+/* Placed last so it wins over all other responsive rules.               */
+@media (min-width: 680px) and (max-width: 820px) and (orientation: portrait) and (min-height: 900px) {
+    .hero-visual { margin-top: -140px !important; }
 }
 
 /* ============================================================
